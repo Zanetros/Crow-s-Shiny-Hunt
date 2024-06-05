@@ -6,14 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    public float life;
-    public Image healthBar;
     private int currentScene;
+
+    [Header("Corações")]
+    public int hearts = 3;
+
+    public GameObject heartSprite1;
+    public GameObject heartSprite2;
+    public GameObject heartSprite3;
 
 
     private void Update()
     {
-        if (life <= 0)
+        if (hearts == 0)
         {
             currentScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentScene);
@@ -22,10 +27,14 @@ public class HealthBar : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        hearts--;
+        if (hearts == 2)
         {
-            life -= 0.35f;
-            healthBar.fillAmount = life;
+            heartSprite1.SetActive(false);
+        }
+        else if (hearts == 1)
+        {
+            heartSprite2.SetActive(false);
         }
     }
 

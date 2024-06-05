@@ -22,9 +22,11 @@ public class ScoreManager : MonoBehaviour
     private bool rankB;
     private bool rankF;
 
+    [Header("Barra de Vida")]
+    public HealthBar healthBar;
+
     private void Update()
     {
-        //AddScore();
         Timer();
     }
 
@@ -37,17 +39,17 @@ public class ScoreManager : MonoBehaviour
 
     public void TimeToFinish()
     {
-        if (_time <= timeToFinish)
+        if (_time <= timeToFinish || healthBar.hearts == 3)
         {
             Debug.Log("Rank S");
             rankS = true;
         }
-        else if (_time <= 1.1f * timeToFinish) // only reach here if _time > timeToFinish
+        else if (_time <= 1.1f * timeToFinish || healthBar.hearts == 2) // only reach here if _time > timeToFinish
         {
             Debug.Log("Rank A");
-            rankA = true;
+            rankA = true;        
         }
-        else if (_time <= 1.4f * timeToFinish) //only reach here if _time > 1.3 * timeToFinish
+        else if (_time <= 1.4f * timeToFinish || healthBar.hearts == 1) //only reach here if _time > 1.3 * timeToFinish
 {
             Debug.Log("Rank B");
             rankB = true;
