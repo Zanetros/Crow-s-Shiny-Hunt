@@ -7,7 +7,7 @@ public class LevelBoundary : MonoBehaviour
     public static float leftSide = -3f;
     public static float rightSide = 3f;
     public static float bottomSide = 0.25f;
-    public static float topSide = 3.25f;
+    public static float topSide = 4f;
 
     public float internalLeft;
     public float internalRight;
