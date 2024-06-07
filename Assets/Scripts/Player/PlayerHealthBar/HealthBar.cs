@@ -27,15 +27,18 @@ public class HealthBar : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        hearts--;
-        if (hearts == 2)
+        if (other.gameObject.CompareTag("Obstacle"))
         {
-            heartSprite1.SetActive(false);
-        }
-        else if (hearts == 1)
-        {
-            heartSprite2.SetActive(false);
-        }
+            hearts--;
+            if (hearts == 2)
+            {
+                heartSprite1.SetActive(false);
+            }
+            else if (hearts == 1)
+            {
+                heartSprite2.SetActive(false);
+            }
+        }               
     }
 
 }
