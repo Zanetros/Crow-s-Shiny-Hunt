@@ -15,16 +15,6 @@ public class HealthBar : MonoBehaviour
     public GameObject heartSprite2;
     public GameObject heartSprite3;
 
-
-    private void Update()
-    {
-        if (hearts == 0)
-        {
-            currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentScene);
-        }
-    }
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
