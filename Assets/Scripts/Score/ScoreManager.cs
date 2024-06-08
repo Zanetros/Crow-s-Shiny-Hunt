@@ -17,10 +17,14 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI rankText;
     public GameObject rankPanel;
 
-    private bool rankS;
-    private bool rankA;
-    private bool rankB;
-    private bool rankF;
+    public bool rankS;
+    public bool rankA;
+    public bool rankB;
+    public bool rankF;
+
+    [Header("Rank Variaveis")]
+    public float rank_A;
+    public float rank_B;
 
     [Header("Barra de Vida")]
     public HealthBar healthBar;
@@ -28,6 +32,7 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         Timer();
+        TimeToFinish();
     }
 
     private void Timer()
@@ -38,26 +43,42 @@ public class ScoreManager : MonoBehaviour
     }
 
     public void TimeToFinish()
-    {
-        if (_time <= timeToFinish || healthBar.hearts == 3)
+    {    
+        if (healthBar.hearts >= 3)
         {
-            Debug.Log("Rank S");
-            rankS = true;
+            if (_time <= timeToFinish)
+            {
+                Debug.Log("Rank S");
+                rankS = true;
+            }
+            else if (_time <= rank_A * timeToFinish) // only reach here if _time > timeToFinish
+            {
+                Debug.Log("Rank A");
+                rankS = false;
+                rankA = true;
+            }
+            else if (_time <= rank_B * timeToFinish) //only reach here if _time > 1.3 * timeToFinish
+            {
+                Debug.Log("Rank B");
+                rankA = false;
+                rankB = true;
+            }
         }
-        else if (_time <= 1.1f * timeToFinish || healthBar.hearts == 2) // only reach here if _time > timeToFinish
+
+        else
         {
-            Debug.Log("Rank A");
-            rankA = true;        
-        }
-        else if (_time <= 1.4f * timeToFinish || healthBar.hearts == 1) //only reach here if _time > 1.3 * timeToFinish
-{
-            Debug.Log("Rank B");
-            rankB = true;
-        }
-        else  //only reach here if _time > 1.4 * timeToFinish
-        {
-            Debug.Log("Rank F");
-            rankF = true;
+            if (healthBar.hearts == 2) // only reach here if _time > timeToFinish
+            {
+                Debug.Log("Rank A");
+                rankS = false;
+                rankA = true;
+            }
+            else if (healthBar.hearts == 1) //only reach here if _time > 1.3 * timeToFinish
+            {
+                Debug.Log("Rank B");
+                rankA = false;
+                rankB = true;
+            }
         }
     }
 
@@ -82,13 +103,6 @@ public class ScoreManager : MonoBehaviour
             rankPanel.SetActive(true);
             rankText.text = "Rank B";
             rankB = false;
-        }
-
-        else
-        {
-            rankPanel.SetActive(true);
-            rankText.text = "Rank F";
-            rankF = false;
         }
     }
 
