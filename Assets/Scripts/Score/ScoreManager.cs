@@ -20,7 +20,6 @@ public class ScoreManager : MonoBehaviour
     public bool rankS;
     public bool rankA;
     public bool rankB;
-    public bool rankF;
 
     [Header("Rank Variaveis")]
     public float rank_A;
@@ -28,11 +27,24 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Barra de Vida")]
     public HealthBar healthBar;
+    private int currentScene;
+
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
 
     private void Update()
     {
         Timer();
         TimeToFinish();
+
+        if (healthBar.hearts == 0)
+        {
+            Time.timeScale = 0f;
+            rankPanel.SetActive(true);
+            rankText.text = "Rank F";
+        }
     }
 
     private void Timer()
