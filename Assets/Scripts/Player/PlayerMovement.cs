@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movimentação")]
     public static float moveSpeed;
     public float horizontalSpeed;
 
     [Header("Mecanica de velocidade")]
-    private float maxVelocity = 15f;
-    private float minVelocity = 9f;
+    public float maxVelocity = 15f;
+    public float minVelocity = 9f;
     private bool max;
     private bool min;
+
+    [Header("UI")]
+    public GameObject maxSprite;
+    public GameObject minSprite;
 
     private void Start()
     {
@@ -26,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         IncreaseVelocity();
         DecreaseVelocity();
+        ChangeVelocityUI();
     }
 
     private void MovePlayerForward()
@@ -114,6 +120,25 @@ public class PlayerMovement : MonoBehaviour
                 moveSpeed = +minVelocity;
                 min = true;
             }
+        }
+    }
+
+    private void ChangeVelocityUI()
+    {
+        if (min)
+        {
+            minSprite.SetActive(true);
+        }
+
+        else if (max)
+        {
+            maxSprite.SetActive(true);
+        }
+
+        else if (!min && !max)
+        {
+            maxSprite.SetActive(false);
+            minSprite.SetActive(false);
         }
     }
 }
