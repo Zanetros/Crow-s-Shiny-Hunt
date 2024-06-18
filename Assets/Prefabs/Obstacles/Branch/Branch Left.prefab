@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 2678324357615084152}
   - component: {fileID: 1861779904608661930}
   - component: {fileID: 8643134112279222154}
-  - component: {fileID: 2845167788100026851}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Obstacle
@@ -217,27 +216,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.022887649, y: 0.023936741, z: 0.025174549}
   m_Center: {x: 0.000038254544, y: -0.00021435287, z: 0.001596601}
---- !u!135 &2845167788100026851
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466323294244056942}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.011575633
-  m_Center: {x: 0.00003702471, y: -0.00030188446, z: 0.0018098055}
 --- !u!1 &802414425621590978
 GameObject:
   m_ObjectHideFlags: 0
