@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.020754695, g: 0.69751686, b: 1, a: 1}
+  m_FogColor: {r: 0.6273585, g: 0.88111323, b: 1, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.02
   m_LinearFogStart: 48.76
@@ -8053,9 +8053,17 @@ PrefabInstance:
       value: arvore_3 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1404911609068190593, guid: 2a90abaf4b4a1664cb9312ebb66d8c9e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404911609068190593, guid: 2a90abaf4b4a1664cb9312ebb66d8c9e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0e772db7400e73843b56099c7f06be6c, type: 2}
+    - target: {fileID: 1404911609068190593, guid: 2a90abaf4b4a1664cb9312ebb66d8c9e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae9a9b74f18e5db4898c785ddd9ebcef, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5350448369480810769, guid: 2a90abaf4b4a1664cb9312ebb66d8c9e, type: 3}
