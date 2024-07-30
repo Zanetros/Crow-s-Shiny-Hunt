@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            if (this.gameObject.transform.position.x > LevelBoundary.leftSide) 
+            if (this.gameObject.transform.position.x > LevelBoundary.instance.leftSide) 
             {
                 transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
             }           
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
+            if (this.gameObject.transform.position.x < LevelBoundary.instance.rightSide)
             {
                 transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed);
             }
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            if (this.gameObject.transform.position.y < LevelBoundary.topSide)
+            if (this.gameObject.transform.position.y < LevelBoundary.instance.topSide)
             {
                 transform.Translate(Vector3.up * Time.deltaTime * horizontalSpeed);
             }
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            if (this.gameObject.transform.position.y > LevelBoundary.bottomSide)
+            if (this.gameObject.transform.position.y > LevelBoundary.instance.bottomSide)
             {
                 transform.Translate(Vector3.down * Time.deltaTime * horizontalSpeed);
             }

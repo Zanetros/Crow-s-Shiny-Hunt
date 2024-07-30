@@ -4,16 +4,31 @@ using UnityEngine;
 
 public class LevelBoundary : MonoBehaviour
 {
-    public static float leftSide = -3f;
-    public static float rightSide = 3f;
-    public static float bottomSide = 0.25f;
-    public static float topSide = 4f;
+    public float leftSide = -3f;
+    public float rightSide = 3f;
+    public float bottomSide = 0.25f;
+    public float topSide = 4f;
 
     public float internalLeft;
     public float internalRight;
     public float internalTop;
     public float internalBottom;
-    
+
+    public static LevelBoundary instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (instance != null)
+        {
+            Destroy(this);
+        }
+    }
+
     private void Update()
     {
         internalLeft = leftSide;
