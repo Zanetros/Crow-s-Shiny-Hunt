@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour
 {
     private int currentScene;
+    [SerializeField] Animator animator;
 
     [Header("Corações")]
     public int hearts = 3;
@@ -19,6 +20,7 @@ public class HealthBar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            StartCoroutine(WaitForBumping());
             hearts--;
             if (hearts == 2)
             {
@@ -31,4 +33,10 @@ public class HealthBar : MonoBehaviour
         }               
     }
 
+    public IEnumerator WaitForBumping()
+    {
+        animator.SetBool("Bump", true);
+        yield return new WaitForSeconds(0.4f);
+        animator.SetBool("Bump", false);
+    }
 }
