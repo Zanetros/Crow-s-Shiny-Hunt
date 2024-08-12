@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Animação")]
     [SerializeField] private Animator animator;
+    public string Fast = "Fast";
 
     [Header("UI")]
     public GameObject maxSprite;
@@ -99,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             else if (moveSpeed <= maxVelocity && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 moveSpeed = +maxVelocity;
-                animator.SetBool("Fast", true);
+                animator.SetBool(Fast, true);
                 max = true;
             }
         }               
@@ -110,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         if (max && Input.GetKeyDown(KeyCode.DownArrow))
         {
             moveSpeed = defaultMoveSpeed;
-            animator.SetBool("Fast", false);
+            animator.SetBool(Fast, false);
             max = false;
         }
 

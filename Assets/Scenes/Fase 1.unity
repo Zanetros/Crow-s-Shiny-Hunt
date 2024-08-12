@@ -1533,6 +1533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 330275313}
   _time: 0
+  animator: {fileID: 826218369}
+  death: Death
   timeToFinish: 15
   rankText: {fileID: 1072258508}
   rankPanel: {fileID: 1401175895}
@@ -2151,6 +2153,7 @@ MonoBehaviour:
   maxVelocity: 30
   minVelocity: 1
   animator: {fileID: 826218369}
+  Fast: Fast
   maxSprite: {fileID: 1768267872}
   minSprite: {fileID: 43655389}
 --- !u!54 &720975731

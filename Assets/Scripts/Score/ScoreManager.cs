@@ -12,6 +12,10 @@ public class ScoreManager : MonoBehaviour
     public float _time;
     private int scene;
 
+    [Header("Animação")]
+    [SerializeField] Animator animator;
+    public string death = "Death";
+
     [Header("Rank da Fase")]
     public float timeToFinish;
     public TextMeshProUGUI rankText;
@@ -29,9 +33,10 @@ public class ScoreManager : MonoBehaviour
     public HealthBar healthBar;
     private int currentScene;
 
-    private void Start()
+    private void Awake()
     {
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1f;
+        rankPanel.SetActive(false);
     }
 
     private void Update()
@@ -41,10 +46,18 @@ public class ScoreManager : MonoBehaviour
 
         if (healthBar.hearts == 0)
         {
-            Time.timeScale = 0f;
+            StartCoroutine(WaitForDeath());
             rankPanel.SetActive(true);
             rankText.text = "Rank F";
         }
+    }
+
+    public IEnumerator WaitForDeath()
+    {
+        animator.SetBool(death, true);
+        PlayerMovement.moveSpeed = 0f;
+        yield return new WaitForSeconds(1.1f);
+        Time.timeScale = 0f;
     }
 
     private void Timer()
