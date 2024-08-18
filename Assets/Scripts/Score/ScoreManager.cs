@@ -57,7 +57,6 @@ public class ScoreManager : MonoBehaviour
         animator.SetBool(death, true);
         PlayerMovement.moveSpeed = 0f;
         yield return new WaitForSeconds(1.1f);
-        Time.timeScale = 0f;
     }
 
     private void Timer()
@@ -135,7 +134,7 @@ public class ScoreManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene().buildIndex;
         rankPanel.SetActive(false);
-        SceneManager.LoadScene(scene);
         Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
     }
 }
