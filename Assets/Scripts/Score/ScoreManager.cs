@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public float _time;
     private int scene;
+    public bool timeStoped;
 
     [Header("Animação")]
     [SerializeField] Animator animator;
@@ -55,12 +57,19 @@ public class ScoreManager : MonoBehaviour
     public IEnumerator WaitForDeath()
     {
         animator.SetBool(death, true);
-        PlayerMovement.moveSpeed = 0f;
+        PlayerMovement.moveSpeed -= 0f;
+        timeStoped = true;
+        PlayerMovement.isDead = true;
+        MoveCamera.isDeadCamera = true;
         yield return new WaitForSeconds(1.1f);
     }
 
     private void Timer()
     {
+        if (timeStoped)
+        {
+            return;
+        }
         _time = Time.timeSinceLevelLoad;
         TimeSpan time = TimeSpan.FromSeconds(_time);
         timerText.text = "Tempo: " + time.Minutes.ToString() + ":" + time.Seconds.ToString();
