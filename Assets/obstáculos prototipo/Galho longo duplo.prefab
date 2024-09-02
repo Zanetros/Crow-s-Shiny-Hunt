@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 21.357
       objectReference: {fileID: 0}
+    - target: {fileID: 4783883007111538430, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4978138490762801681, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
       propertyPath: m_Name
       value: galho curto ofi (2)
@@ -160,6 +164,10 @@ PrefabInstance:
     - target: {fileID: 294238613861696179, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -22.508
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783883007111538430, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4978138490762801681, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
       propertyPath: m_Name
@@ -231,6 +239,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1910671248194830944, guid: 12079f713bc8cc649afe6cf55e485c73, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3558398314723740467, guid: 12079f713bc8cc649afe6cf55e485c73, type: 3}
       propertyPath: m_Name
       value: galho curto 1
@@ -300,6 +312,10 @@ PrefabInstance:
     - target: {fileID: 294238613861696179, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.572
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783883007111538430, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4978138490762801681, guid: 4d09a81ef999a274b93541a16e119888, type: 3}
       propertyPath: m_Name
