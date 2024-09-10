@@ -2520,6 +2520,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3848233612983700227, guid: adc4dd34c45bb2b4bba09142351d047c, type: 3}
   m_PrefabInstance: {fileID: 207444054}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &208152269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1111541497880884456, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+  m_PrefabInstance: {fileID: 1780903676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &224461553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12351,6 +12356,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -91.165
       objectReference: {fileID: 0}
+    - target: {fileID: 4810736829035125546, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: crowMesh
+      value: 
+      objectReference: {fileID: 208152269}
     - target: {fileID: 5083199281989886487, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_Name
       value: ====Gameplay====
