@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3695079023501865167}
   m_Layer: 0
   m_Name: "\xE1rvore pequena"
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,10 +44,6 @@ PrefabInstance:
     - target: {fileID: 7165140917390709717, guid: 6eedc96ccc3b25e4583f57df945be674, type: 3}
       propertyPath: m_Name
       value: tronco fino
-      objectReference: {fileID: 0}
-    - target: {fileID: 7165140917390709717, guid: 6eedc96ccc3b25e4583f57df945be674, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9162467305783698314, guid: 6eedc96ccc3b25e4583f57df945be674, type: 3}
       propertyPath: m_LocalScale.x
@@ -114,10 +110,6 @@ PrefabInstance:
     - target: {fileID: 1973439133230355360, guid: 59e666b4ed48652428c08016a06fccca, type: 3}
       propertyPath: m_Name
       value: copa pequena
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973439133230355360, guid: 59e666b4ed48652428c08016a06fccca, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9000162019763022177, guid: 59e666b4ed48652428c08016a06fccca, type: 3}
       propertyPath: m_LocalPosition.x
