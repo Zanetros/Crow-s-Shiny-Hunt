@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movimentação")]
     public static float moveSpeed;
+    public float defaultMoveSpeed;
     public float horizontalSpeed;
+    public static bool isDead;
 
     [Header("Mecanica de velocidade")]
     public float maxVelocity = 15f;
@@ -14,17 +16,23 @@ public class PlayerMovement : MonoBehaviour
     private bool max;
     private bool min;
 
+    [Header("Animação")]
+    [SerializeField] private Animator animator;
+    public string Fast = "Fast";
+
     [Header("UI")]
     public GameObject maxSprite;
     public GameObject minSprite;
 
     private void Start()
     {
-        moveSpeed = 12f;
+        isDead = false;
+        moveSpeed = defaultMoveSpeed;
     }
 
     private void Update()
     {
+        if (isDead) return;
         MovePlayerForward();
         MovePlayerHorizontal();
         MovePlayerVertical();
@@ -81,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (min && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            moveSpeed = 12f;
+            moveSpeed = defaultMoveSpeed;
             min = false;
         }
 
@@ -95,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
             else if (moveSpeed <= maxVelocity && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 moveSpeed = +maxVelocity;
+                animator.SetBool(Fast, true);
                 max = true;
             }
         }               
@@ -104,7 +113,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (max && Input.GetKeyDown(KeyCode.DownArrow))
         {
-            moveSpeed = 12f;
+            moveSpeed = defaultMoveSpeed;
+            animator.SetBool(Fast, false);
             max = false;
         }
 

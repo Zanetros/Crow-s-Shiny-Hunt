@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Time.timeScale = 0;
-            //scoreManager.TimeToFinish();
             scoreManager.ScoreText();
         }
     }

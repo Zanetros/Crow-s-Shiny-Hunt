@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,11 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public float _time;
     private int scene;
+    public bool timeStoped;
+
+    [Header("Animação")]
+    [SerializeField] Animator animator;
+    public string death = "Death";
 
     [Header("Rank da Fase")]
     public float timeToFinish;
@@ -29,9 +35,10 @@ public class ScoreManager : MonoBehaviour
     public HealthBar healthBar;
     private int currentScene;
 
-    private void Start()
+    private void Awake()
     {
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1f;
+        rankPanel.SetActive(false);
     }
 
     private void Update()
@@ -41,14 +48,28 @@ public class ScoreManager : MonoBehaviour
 
         if (healthBar.hearts == 0)
         {
-            Time.timeScale = 0f;
+            StartCoroutine(WaitForDeath());
             rankPanel.SetActive(true);
             rankText.text = "Rank F";
         }
     }
 
+    public IEnumerator WaitForDeath()
+    {
+        animator.SetBool(death, true);
+        PlayerMovement.moveSpeed -= 0f;
+        timeStoped = true;
+        PlayerMovement.isDead = true;
+        MoveCamera.isDeadCamera = true;
+        yield return new WaitForSeconds(1.1f);
+    }
+
     private void Timer()
     {
+        if (timeStoped)
+        {
+            return;
+        }
         _time = Time.timeSinceLevelLoad;
         TimeSpan time = TimeSpan.FromSeconds(_time);
         timerText.text = "Tempo: " + time.Minutes.ToString() + ":" + time.Seconds.ToString();
@@ -122,7 +143,7 @@ public class ScoreManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene().buildIndex;
         rankPanel.SetActive(false);
-        SceneManager.LoadScene(scene);
         Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
     }
 }

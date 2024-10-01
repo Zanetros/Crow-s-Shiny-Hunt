@@ -28,4 +28,9 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(currentScene);
         Time.timeScale = 1f;
     }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
