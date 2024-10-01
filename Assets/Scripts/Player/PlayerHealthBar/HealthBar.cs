@@ -14,8 +14,6 @@ public class HealthBar : MonoBehaviour
     [Header("Corroutine Variables")]
     public float waitForBumping = 0.4f;
     public float ghostTime = 1.3f;
-    public float flashPlayer = 0.14f;
-    public GameObject crowMesh;
 
     [Header("Corações")]
     public int hearts = 3;
@@ -62,33 +60,8 @@ public class HealthBar : MonoBehaviour
 
     public IEnumerator CollisionInvencibility()
     {
-        StartCoroutine(FlashPlayer());
         ghostMode = true;
         yield return new WaitForSeconds(ghostTime);
         ghostMode = false;
-    }
-
-    public IEnumerator FlashPlayer()
-    {
-        yield return new WaitForSeconds(.1f);
-        if (PlayerMovement.isDead)
-        {
-            Debug.Log("DEAD");
-        }
-        else
-        {
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(false);
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(true);
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(false);
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(true);
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(false);
-            yield return new WaitForSeconds(flashPlayer);
-            crowMesh.SetActive(true);
-        }
     }
 }

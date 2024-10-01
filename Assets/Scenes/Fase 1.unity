@@ -752,11 +752,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.772186, y: 4.709493, z: 0.72021866}
   m_Center: {x: 0.0010635853, y: -0.6005497, z: -1.9569302}
---- !u!1 &1149559296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1111541497880884456, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
-  m_PrefabInstance: {fileID: 6094832419138010245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234553954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,18 +1801,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1111541497880884456, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670297946264948888, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810736829035125546, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
-      propertyPath: crowMesh
-      value: 
-      objectReference: {fileID: 1149559296}
     - target: {fileID: 5083199281989886487, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_Name
       value: ====Gameplay====
