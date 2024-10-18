@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float minVelocity = 9f;
     private bool max;
     private bool min;
+    private bool normal;
 
     [Header("Animação")]
     [SerializeField] private Animator animator;
@@ -23,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("UI")]
     public GameObject maxSprite;
     public GameObject minSprite;
+    public GameObject normalSprite;
 
     private void Start()
     {
         isDead = false;
+        normal = true;
         moveSpeed = defaultMoveSpeed;
     }
 
@@ -90,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         if (min && Input.GetKeyDown(KeyCode.UpArrow))
         {
             moveSpeed = defaultMoveSpeed;
+            normal = true;
             min = false;
         }
 
@@ -103,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
             else if (moveSpeed <= maxVelocity && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 moveSpeed = +maxVelocity;
+                normal = false;
                 animator.SetBool(Fast, true);
                 max = true;
             }
@@ -115,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = defaultMoveSpeed;
             animator.SetBool(Fast, false);
+            normal = true;
             max = false;
         }
 
@@ -128,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
             else if (moveSpeed >= minVelocity && Input.GetKeyDown(KeyCode.DownArrow))
             {
                 moveSpeed = +minVelocity;
+                normal = false;
                 min = true;
             }
         }
@@ -138,17 +145,20 @@ public class PlayerMovement : MonoBehaviour
         if (min)
         {
             minSprite.SetActive(true);
+            normalSprite.SetActive(false);
         }
 
         else if (max)
         {
             maxSprite.SetActive(true);
+            normalSprite.SetActive(false);
         }
 
         else if (!min && !max)
         {
             maxSprite.SetActive(false);
             minSprite.SetActive(false);
+            normalSprite.SetActive(true);
         }
     }
 }
