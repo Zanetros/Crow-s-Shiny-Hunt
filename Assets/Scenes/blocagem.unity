@@ -9203,6 +9203,10 @@ PrefabInstance:
       value: -74.72
       objectReference: {fileID: 0}
     - target: {fileID: 3006456051762476109, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_text
+      value: 0:0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006456051762476109, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_fontSize
       value: 100
       objectReference: {fileID: 0}
@@ -9227,16 +9231,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 783.0515
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 128.1
+      value: 128.09998
       objectReference: {fileID: 0}
     - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 39
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3097568308832144535, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 441
+      value: -92
       objectReference: {fileID: 0}
     - target: {fileID: 4810736829035125546, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: crowMesh
@@ -14848,7 +14872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5, y: 141}
+  m_AnchoredPosition: {x: -51, y: 146}
   m_SizeDelta: {x: 2145.7026, y: 571}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107010365
