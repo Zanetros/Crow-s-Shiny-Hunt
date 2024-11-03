@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public InputActionReference move;
+    
     [Header("Movimentação")]
     public static float moveSpeed;
     public float defaultMoveSpeed;
