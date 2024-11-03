@@ -5,8 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public InputActionReference move;
-    
+    public InputActionReference moveLeft;
+    public InputActionReference moveRight;
+    public InputActionReference moveUp;
+    public InputActionReference moveDown;
+
+    public PlayerControls playerControls;
+
     [Header("Movimentação")]
     public static float moveSpeed;
     public float defaultMoveSpeed;
@@ -34,14 +39,47 @@ public class PlayerMovement : MonoBehaviour
         isDead = false;
         normal = true;
         moveSpeed = defaultMoveSpeed;
+
+        playerControls = new PlayerControls();
+    }
+
+    private void OnMoveLeft()
+    {
+        if (this.gameObject.transform.position.x > LevelBoundary.instance.leftSide)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
+        }
+    }
+
+    private void OnMoveRight()
+    {
+        if (this.gameObject.transform.position.x < LevelBoundary.instance.rightSide)
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed);
+        }
+    }
+
+    private void OnMoveUp()
+    {
+        if (this.gameObject.transform.position.y < LevelBoundary.instance.topSide)
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * horizontalSpeed);
+        }
+    }
+
+    private void OnMoveDown() 
+    {
+        if (this.gameObject.transform.position.y > LevelBoundary.instance.bottomSide)
+        {
+            transform.Translate(Vector3.down * Time.deltaTime * horizontalSpeed);
+        }
     }
 
     private void Update()
     {
         if (isDead) return;
+
         MovePlayerForward();
-        MovePlayerHorizontal();
-        MovePlayerVertical();
 
         IncreaseVelocity();
         DecreaseVelocity();

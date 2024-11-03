@@ -9155,9 +9155,29 @@ PrefabInstance:
       value: -98
       objectReference: {fileID: 0}
     - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: -3424249591541335847, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: moveUp
+      value: 
+      objectReference: {fileID: 8959155610399598578, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: moveDown
+      value: 
+      objectReference: {fileID: -8915698923712000876, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: moveLeft
+      value: 
+      objectReference: {fileID: -5109723915493152242, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: minSprite
       value: 
       objectReference: {fileID: 1590953817}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: moveRight
+      value: 
+      objectReference: {fileID: -6124888690754179246, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
     - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: maxVelocity
       value: 18
@@ -9170,6 +9190,22 @@ PrefabInstance:
       propertyPath: normalSprite
       value: 
       objectReference: {fileID: 2107010363}
+    - target: {fileID: 1283738106137011455, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: cameraSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792088697813808611, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792088697813808611, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792088697813808611, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2058892256169204685, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_Sprite
       value: 
