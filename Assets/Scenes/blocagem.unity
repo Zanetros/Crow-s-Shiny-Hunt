@@ -9169,7 +9169,7 @@ PrefabInstance:
     - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: moveLeft
       value: 
-      objectReference: {fileID: -5109723915493152242, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
+      objectReference: {fileID: -6008852235517936567, guid: 28ef7b72673c2af468037acc8bfd85e9, type: 3}
     - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: minSprite
       value: 
@@ -9191,8 +9191,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2107010363}
     - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: horizontalSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 600844616655803582, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: defaultMoveSpeed
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1283738106137011455, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: cameraSpeed

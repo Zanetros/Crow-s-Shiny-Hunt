@@ -34,15 +34,41 @@ public class PlayerMovement : MonoBehaviour
     public GameObject minSprite;
     public GameObject normalSprite;
 
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
+
     private void Start()
     {
         isDead = false;
         normal = true;
         moveSpeed = defaultMoveSpeed;
-
-        playerControls = new PlayerControls();
     }
 
+    private void Update()
+    {
+        if (isDead) return;
+
+        MovePlayerForward();
+
+        HandleMovement();
+        IncreaseVelocity();
+        DecreaseVelocity();
+        ChangeVelocityUI();
+    }
+
+    #region Player Movement Input
     private void OnMoveLeft()
     {
         if (this.gameObject.transform.position.x > LevelBoundary.instance.leftSide)
@@ -67,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnMoveDown() 
+    private void OnMoveDown()
     {
         if (this.gameObject.transform.position.y > LevelBoundary.instance.bottomSide)
         {
@@ -75,58 +101,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void HandleMovement()
     {
-        if (isDead) return;
+        bool isLeft = playerControls.Gameplay.MoveLeft.ReadValue<float>() > 0.1f;
 
-        MovePlayerForward();
+        if (isLeft)
+        {
+            OnMoveLeft();
+        }
 
-        IncreaseVelocity();
-        DecreaseVelocity();
-        ChangeVelocityUI();
+        bool isRight = playerControls.Gameplay.MoveRight.ReadValue<float>() > 0.1f;
+
+        if (isRight)
+        {
+            OnMoveRight();
+        }
+
+        bool isDown = playerControls.Gameplay.MoveDown.ReadValue<float>() > 0.1f;
+
+        if (isDown)
+        {
+            OnMoveDown();
+        }
+
+        bool isUp = playerControls.Gameplay.MoveUp.ReadValue<float>() > 0.1f;
+
+        if (isUp)
+        {
+            OnMoveUp();
+        }
     }
+    #endregion
 
     private void MovePlayerForward()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
-    }
-
-    private void MovePlayerHorizontal()
-    {
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (this.gameObject.transform.position.x > LevelBoundary.instance.leftSide) 
-            {
-                transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed);
-            }           
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (this.gameObject.transform.position.x < LevelBoundary.instance.rightSide)
-            {
-                transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed);
-            }
-        }
-    }
-
-    private void MovePlayerVertical()
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (this.gameObject.transform.position.y < LevelBoundary.instance.topSide)
-            {
-                transform.Translate(Vector3.up * Time.deltaTime * horizontalSpeed);
-            }
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            if (this.gameObject.transform.position.y > LevelBoundary.instance.bottomSide)
-            {
-                transform.Translate(Vector3.down * Time.deltaTime * horizontalSpeed);
-            }
-        }
     }
 
     private void IncreaseVelocity()
