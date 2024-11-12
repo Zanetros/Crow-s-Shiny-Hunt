@@ -63,8 +63,6 @@ public class PlayerMovement : MonoBehaviour
         MovePlayerForward();
 
         HandleMovement();
-        IncreaseVelocity();
-        DecreaseVelocity();
         ChangeVelocityUI();
     }
 
@@ -133,12 +131,9 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-    private void MovePlayerForward()
-    {
-        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
-    }
+    #region Player Velocity
 
-    private void IncreaseVelocity()
+    private void OnFaster()
     {
         if (min && Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -161,10 +156,10 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool(Fast, true);
                 max = true;
             }
-        }               
+        }
     }
 
-    private void DecreaseVelocity()
+    private void OnSlower()
     {
         if (max && Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -211,4 +206,11 @@ public class PlayerMovement : MonoBehaviour
             normalSprite.SetActive(true);
         }
     }
+
+    #endregion
+
+    private void MovePlayerForward()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
+    }  
 }
