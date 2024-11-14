@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnFaster()
     {
-        if (min && Input.GetKeyDown(KeyCode.UpArrow))
+        if (min)
         {
             moveSpeed = defaultMoveSpeed;
             normal = true;
@@ -144,12 +144,12 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            if (moveSpeed >= maxVelocity && Input.GetKeyDown(KeyCode.UpArrow))
+            if (moveSpeed >= maxVelocity)
             {
                 Debug.Log("Maximo");
             }
 
-            else if (moveSpeed <= maxVelocity && Input.GetKeyDown(KeyCode.UpArrow))
+            else if (moveSpeed <= maxVelocity)
             {
                 moveSpeed = +maxVelocity;
                 normal = false;
@@ -161,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnSlower()
     {
-        if (max && Input.GetKeyDown(KeyCode.DownArrow))
+        if (max)
         {
             moveSpeed = defaultMoveSpeed;
             animator.SetBool(Fast, false);
@@ -171,12 +171,12 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            if (moveSpeed <= minVelocity && Input.GetKeyDown(KeyCode.DownArrow))
+            if (moveSpeed <= minVelocity)
             {
                 Debug.Log("Minimo");
             }
 
-            else if (moveSpeed >= minVelocity && Input.GetKeyDown(KeyCode.DownArrow))
+            else if (moveSpeed >= minVelocity)
             {
                 moveSpeed = +minVelocity;
                 normal = false;
