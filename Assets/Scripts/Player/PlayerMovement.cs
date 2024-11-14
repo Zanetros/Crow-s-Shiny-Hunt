@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference moveDown;
 
     public PlayerControls playerControls;
+    public MenuManager menuManager;
 
     [Header("Movimentação")]
     public static float moveSpeed;
@@ -208,6 +209,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
+    private void OnPause()
+    {
+        menuManager.OpenMenu();
+    }
 
     private void MovePlayerForward()
     {

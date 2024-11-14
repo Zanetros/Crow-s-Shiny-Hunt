@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public int currentScene;
+    private int currentScene;
     
     [Header("Painel Menu")]
     public GameObject menuPanel;
-    
+
     public void OpenMenu()
     {
         menuPanel.SetActive(true);

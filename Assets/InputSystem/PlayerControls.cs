@@ -80,6 +80,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a12cb3f5-aba6-422e-896f-35e3b3f9d57d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -214,6 +223,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Slower"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8842e4d5-2d44-46ae-9088-8e6bca904f55"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9944744e-7462-435e-8e2f-8890d3c0d75b"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -251,6 +282,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Gameplay_MoveDown = m_Gameplay.FindAction("MoveDown", throwIfNotFound: true);
         m_Gameplay_Faster = m_Gameplay.FindAction("Faster", throwIfNotFound: true);
         m_Gameplay_Slower = m_Gameplay.FindAction("Slower", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -318,6 +350,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_MoveDown;
     private readonly InputAction m_Gameplay_Faster;
     private readonly InputAction m_Gameplay_Slower;
+    private readonly InputAction m_Gameplay_Pause;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -328,6 +361,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @MoveDown => m_Wrapper.m_Gameplay_MoveDown;
         public InputAction @Faster => m_Wrapper.m_Gameplay_Faster;
         public InputAction @Slower => m_Wrapper.m_Gameplay_Slower;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -355,6 +389,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Slower.started += instance.OnSlower;
             @Slower.performed += instance.OnSlower;
             @Slower.canceled += instance.OnSlower;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -377,6 +414,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Slower.started -= instance.OnSlower;
             @Slower.performed -= instance.OnSlower;
             @Slower.canceled -= instance.OnSlower;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -420,5 +460,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMoveDown(InputAction.CallbackContext context);
         void OnFaster(InputAction.CallbackContext context);
         void OnSlower(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
