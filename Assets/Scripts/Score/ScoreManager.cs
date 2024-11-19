@@ -50,7 +50,7 @@ public class ScoreManager : MonoBehaviour
         {
             StartCoroutine(WaitForDeath());
             rankPanel.SetActive(true);
-            rankText.text = "Rank F";
+            rankText.text = "F";
         }
     }
 
@@ -81,18 +81,18 @@ public class ScoreManager : MonoBehaviour
         {
             if (_time <= timeToFinish)
             {
-                Debug.Log("Rank S");
+                Debug.Log("S");
                 rankS = true;
             }
             else if (_time <= rank_A * timeToFinish) // only reach here if _time > timeToFinish
             {
-                Debug.Log("Rank A");
+                Debug.Log("A");
                 rankS = false;
                 rankA = true;
             }
             else if (_time <= rank_B * timeToFinish) //only reach here if _time > 1.3 * timeToFinish
             {
-                Debug.Log("Rank B");
+                Debug.Log("B");
                 rankA = false;
                 rankB = true;
             }
@@ -102,13 +102,13 @@ public class ScoreManager : MonoBehaviour
         {
             if (healthBar.hearts == 2) // only reach here if _time > timeToFinish
             {
-                Debug.Log("Rank A");
+                Debug.Log("A");
                 rankS = false;
                 rankA = true;
             }
             else if (healthBar.hearts == 1) //only reach here if _time > 1.3 * timeToFinish
             {
-                Debug.Log("Rank B");
+                Debug.Log("B");
                 rankA = false;
                 rankB = true;
             }
@@ -120,21 +120,21 @@ public class ScoreManager : MonoBehaviour
         if (rankS)
         {
             rankPanel.SetActive(true);
-            rankText.text = "Rank S";
+            rankText.text = "S";
             rankS = false;
         }
         
         else if (rankA)
         {
             rankPanel.SetActive(true);
-            rankText.text = "Rank A";
+            rankText.text = "A";
             rankA = false;
         }
 
         else if (rankB)
         {
             rankPanel.SetActive(true);
-            rankText.text = "Rank B";
+            rankText.text = "B";
             rankB = false;
         }
     }
