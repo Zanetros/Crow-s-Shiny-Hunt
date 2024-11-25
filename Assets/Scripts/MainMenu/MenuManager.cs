@@ -6,20 +6,31 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     private int currentScene;
+    public ScoreManager scoreManager;
     
     [Header("Painel Menu")]
     public GameObject menuPanel;
 
-    public void OpenMenu()
-    {
-        menuPanel.SetActive(true);
-        Time.timeScale = 0f;
-    }
+    private bool openMenu;
 
-    public void CloseMenu()
-    {
-        menuPanel.SetActive(false);
-        Time.timeScale = 1f;
+    public void OpenMenu()
+    {      
+        if (scoreManager.isDead) {  return; }
+        
+        if (!openMenu)
+        {
+            Debug.Log("Menu Open");
+            Time.timeScale = 0f;
+            menuPanel.SetActive(true);
+        }
+        else
+        {
+
+            Debug.Log("Menu Closed");
+            menuPanel.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        openMenu = !openMenu;
     }
 
     public void RestartLevel()

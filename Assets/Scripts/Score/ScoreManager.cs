@@ -22,6 +22,7 @@ public class ScoreManager : MonoBehaviour
     public float timeToFinish;
     public TextMeshProUGUI rankText;
     public GameObject rankPanel;
+    public bool isDead = false;
 
     public bool rankS;
     public bool rankA;
@@ -39,6 +40,7 @@ public class ScoreManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         rankPanel.SetActive(false);
+        isDead = false;
     }
 
     private void Update()
@@ -49,6 +51,7 @@ public class ScoreManager : MonoBehaviour
         if (healthBar.hearts == 0)
         {
             StartCoroutine(WaitForDeath());
+            isDead = true;
             rankPanel.SetActive(true);
             rankText.text = "F";
         }
