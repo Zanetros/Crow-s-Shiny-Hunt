@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class ScoreManager : MonoBehaviour
     public string death = "Death";
 
     [Header("Rank da Fase")]
+
+    [SerializeField] private Button selectedButton;
+
     public float timeToFinish;
     public TextMeshProUGUI rankText;
     public GameObject rankPanel;
@@ -48,10 +52,13 @@ public class ScoreManager : MonoBehaviour
         Timer();
         TimeToFinish();
 
+        if (isDead) { return; }
+
         if (healthBar.hearts == 0)
         {
             StartCoroutine(WaitForDeath());
             isDead = true;
+            selectedButton.Select();
             rankPanel.SetActive(true);
             rankText.text = "F";
         }

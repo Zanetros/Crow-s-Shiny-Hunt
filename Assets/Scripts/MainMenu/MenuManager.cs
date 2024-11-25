@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MenuManager : MonoBehaviour
     
     [Header("Painel Menu")]
     public GameObject menuPanel;
+    public Button selectedButton;
 
     private bool openMenu;
 
@@ -20,6 +22,7 @@ public class MenuManager : MonoBehaviour
         if (!openMenu)
         {
             Debug.Log("Menu Open");
+            selectedButton.Select();
             Time.timeScale = 0f;
             menuPanel.SetActive(true);
         }
