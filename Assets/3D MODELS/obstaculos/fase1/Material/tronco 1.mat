@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: copa
-  m_Shader: {fileID: -6465566751694194690, guid: 507a49e81850b8f43a18b5786e28a5c4, type: 3}
+  m_Name: tronco 1
+  m_Shader: {fileID: -6465566751694194690, guid: 67cabd5fd18c7ab4ea69c274b49d906b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -54,7 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: eb50e9d7bfd1b6f4db4137dbac1edc1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -67,6 +67,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0427262fa5044a57977c4cbe6007a6b6_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: eb50e9d7bfd1b6f4db4137dbac1edc1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -127,10 +131,10 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.40392157, g: 0.75686276, b: 0.34901962, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _fresnelColor: {r: 0.5647059, g: 0.78039217, b: 0.4, a: 1}
+    - _fresnelColor: {r: 0.34901962, g: 0.20784314, b: 0.24313726, a: 1}
     - _shadowColor: {r: 0, g: 0.08627451, b: 0.43529412, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7575575126164092064
