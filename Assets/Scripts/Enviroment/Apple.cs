@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public Rigidbody rb;
-    public string player = "Player";
-    public string fall = "fall";
-    public Animator animator;
+    private string player = "Player";
+    private string fall = "fall";
+
+    public Rigidbody [] rb;
+    public Animator [] animator;
+    public float timeToFall = 0.1f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +22,15 @@ public class Apple : MonoBehaviour
 
     public IEnumerator WaitForApple()
     {
-        animator.SetBool(fall, true);
-        yield return new WaitForSeconds(0.8f);
-        rb.useGravity = true;
+        for (int i = 0; i < animator.Length; i++)
+        {
+            animator[i].SetBool(fall, true);
+        }
+
+        yield return new WaitForSeconds(timeToFall);
+        for (int i = 0; i < rb.Length; i++)
+        {
+            rb[i].useGravity = true;
+        }
     }
 }
