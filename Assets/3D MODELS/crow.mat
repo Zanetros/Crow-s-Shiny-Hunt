@@ -112,6 +112,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _Float: 2.26
     - _GlossMapScale: 1
     - _Glossiness: 0.26
     - _GlossyReflections: 1
@@ -123,7 +124,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ShadowBrightness: -6.05
+    - _ShadowBrightness: -8.49
     - _Smoothness: 0.26
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -135,7 +136,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.0029176, g: 0.0051163905, b: 0.010879456, a: 1}
-    - _Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+    - _Color: {r: 0.06817826, g: 0.03526519, b: 0.14716971, a: 1}
+    - _Color_1: {r: 0.13281398, g: 0.06666668, b: 0.22352941, a: 0}
+    - _Color_2: {r: 0.06406765, g: 0.012936972, b: 0.08679241, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
