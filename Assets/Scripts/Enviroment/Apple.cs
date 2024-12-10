@@ -10,7 +10,7 @@ public class Apple : MonoBehaviour
 
     public Rigidbody [] rb;
     public Animator [] animator;
-    public float timeToFall = 0.1f;
+    private float timeToFall = 0.3f;
 
     private void OnTriggerEnter(Collider other)
     {
