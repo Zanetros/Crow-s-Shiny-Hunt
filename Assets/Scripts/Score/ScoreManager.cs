@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Rank da Fase")]
 
-    [SerializeField] private Button selectedButton;
+    public Button selectedButton;
 
     public float timeToFinish;
     public TextMeshProUGUI rankText;
