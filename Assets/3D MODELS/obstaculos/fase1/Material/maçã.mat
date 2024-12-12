@@ -102,6 +102,8 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FogDistance: 30
+    - _FogMinDistance: -0.5
+    - _FogOn: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossinessSource: 0

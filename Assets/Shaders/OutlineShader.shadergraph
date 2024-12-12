@@ -2014,10 +2014,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3ac4afa9-e67b-40e2-886c-7823bd242116"
     },
-    "m_Name": "test",
+    "m_Name": "FogMinDistance",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "test",
-    "m_DefaultReferenceName": "_test",
+    "m_RefNameGeneratedByDisplayName": "FogMinDistance",
+    "m_DefaultReferenceName": "_FogMinDistance",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2027,10 +2027,10 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 0,
+    "m_Value": -0.5,
+    "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 0.0,
+        "x": -5.0,
         "y": 1.0
     }
 }
@@ -2559,7 +2559,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "9f22505962e8459b87bbd79cd5aa8820",
     "m_Id": 0,
-    "m_DisplayName": "test",
+    "m_DisplayName": "FogMinDistance",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

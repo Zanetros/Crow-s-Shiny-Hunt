@@ -1343,10 +1343,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2162.064453125,
-            "y": 840.5664672851563,
-            "width": 0.0,
-            "height": 0.0
+            "x": 2077.60009765625,
+            "y": 793.5999755859375,
+            "width": 112.0,
+            "height": 33.60003662109375
         }
     },
     "m_Slots": [
@@ -2029,10 +2029,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1885.8485107421875,
-            "y": 2366.96484375,
-            "width": 0.0,
-            "height": 0.0
+            "x": 1808.0,
+            "y": 2316.800048828125,
+            "width": 96.0,
+            "height": 33.599853515625
         }
     },
     "m_Slots": [
@@ -3666,10 +3666,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1237.400146484375,
-            "y": 824.3201293945313,
-            "width": 0.0,
-            "height": 0.0
+            "x": -1412.0001220703125,
+            "y": 879.2000732421875,
+            "width": 208.0,
+            "height": 325.60009765625
         }
     },
     "m_Slots": [
@@ -4083,10 +4083,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2027.9993896484375,
-            "y": 649.044921875,
-            "width": 0.0,
-            "height": 0.0
+            "x": 2304.000244140625,
+            "y": 640.7999877929688,
+            "width": 208.0,
+            "height": 359.2000732421875
         }
     },
     "m_Slots": [
@@ -4318,10 +4318,10 @@
     "m_Guid": {
         "m_GuidSerialized": "687780c1-b430-40f0-b70d-9b7d6cd0da61"
     },
-    "m_Name": "test",
+    "m_Name": "FogMinDistance",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "test",
-    "m_DefaultReferenceName": "_test",
+    "m_RefNameGeneratedByDisplayName": "FogMinDistance",
+    "m_DefaultReferenceName": "_FogMinDistance",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -4331,10 +4331,10 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 0,
+    "m_Value": -0.5,
+    "m_FloatType": 1,
     "m_RangeValues": {
-        "x": 0.0,
+        "x": -5.0,
         "y": 1.0
     }
 }
@@ -4509,7 +4509,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "a4dbf5f6aff1403599f1e23feeea8985",
     "m_Id": 0,
-    "m_DisplayName": "test",
+    "m_DisplayName": "FogMinDistance",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -6010,10 +6010,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -736.0,
-            "y": 52.800025939941409,
+            "x": -600.0,
+            "y": -236.8000030517578,
             "width": 208.0,
-            "height": 301.6000061035156
+            "height": 301.60003662109377
         }
     },
     "m_Slots": [
