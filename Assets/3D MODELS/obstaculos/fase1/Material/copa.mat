@@ -106,7 +106,7 @@ Material:
     - _EnvironmentReflections: 1
     - _FogDistance: 30
     - _FogMinDistance: -0.5
-    - _FogOn: 0
+    - _FogOn: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0

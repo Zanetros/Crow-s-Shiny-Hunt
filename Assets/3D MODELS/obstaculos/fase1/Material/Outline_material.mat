@@ -64,7 +64,8 @@ Material:
     - _DstBlend: 0
     - _FadeDistance: 50
     - _FogDistance: 30
-    - _FogOn: 0
+    - _FogMinDistance: -0.5
+    - _FogOn: 1
     - _OutlineThickness: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
