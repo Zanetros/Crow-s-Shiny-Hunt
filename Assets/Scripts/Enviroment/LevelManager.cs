@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,7 +11,12 @@ public class LevelManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Time.timeScale = 0;
+            scoreManager.isDead = true;
+            scoreManager.selectedButton.Select();
+            PlayerMovement.moveSpeed -= 0f;
+            scoreManager.timeStoped = true;
+            PlayerMovement.isDead = true;
+            MoveCamera.isDeadCamera = true;
             scoreManager.ScoreText();
         }
     }
