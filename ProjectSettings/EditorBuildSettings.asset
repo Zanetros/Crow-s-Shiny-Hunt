@@ -9,10 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 43406deb6b32c7d40a41881224d391f9
   - enabled: 1
-    path: Assets/Scenes/Fase 1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Fase 2.unity
-    guid: ab8c5854a14599840af07638008e4d93
+    path: Assets/Scenes/Fase Floresta.unity
+    guid: 1204f39e8935f63478ee68bb4baae3e6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 608364fc00a6b454083cbe234c6c25ba, type: 2}

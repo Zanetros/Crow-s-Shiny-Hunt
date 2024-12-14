@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelChooser : MonoBehaviour
 {
     [Header("Botão Jogar")]
     public GameObject levelPanel;
     public GameObject menuButtons;
+    public Button selectedButtom;
 
     [Header("Voltar dos Levels")]
     public GameObject backPanel;
 
-    public void Update()
+    public void Start()
     {
-        
+        selectedButtom.Select();
     }
 
     public void Play()
