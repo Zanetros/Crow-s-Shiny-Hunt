@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.57254905, g: 0.75686276, b: 0.8627451, a: 1}
   m_FogMode: 1
   m_FogDensity: 1
@@ -622,6 +622,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1400,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arvorepequena (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1460,6 +1468,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1598,6 +1610,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1962,6 +1978,10 @@ PrefabInstance:
     - target: {fileID: 994272565449103331, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314403225870687246, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
@@ -2548,9 +2568,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 4350402613788803776, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2704,6 +2732,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3196,6 +3228,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3737,6 +3773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4192,6 +4232,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4658,6 +4702,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5335,6 +5383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arvorepequena (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5604,6 +5656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5722,6 +5778,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6331,6 +6391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6604,6 +6668,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7255,6 +7323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arvorepequena (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7450,6 +7522,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7802,6 +7878,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4314403225870687246, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (11)
@@ -7867,6 +7947,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9005,6 +9089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9285,6 +9373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9378,7 +9470,7 @@ GameObject:
   - component: {fileID: 944618456}
   m_Layer: 0
   m_Name: arvorepequena_copa (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9522,6 +9614,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10963,6 +11059,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12841,6 +12941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13918,6 +14022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arvorepequena (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14065,6 +14173,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15069,6 +15181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15335,7 +15451,7 @@ GameObject:
   - component: {fileID: 1606909346}
   m_Layer: 0
   m_Name: arvorepequena_copa (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15479,6 +15595,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16156,7 +16276,7 @@ GameObject:
   - component: {fileID: 1656991360}
   m_Layer: 0
   m_Name: arvorepequena_copa (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17365,6 +17485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: copagrandetopo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18046,6 +18170,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20379,6 +20507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arvorepequena (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20653,6 +20785,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405049485744068867, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_Size.x
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 405049485744068867, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_Size.y
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 405049485744068867, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_Size.z
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 405049485744068867, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_Center.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 405049485744068867, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -20698,7 +20846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4336814809268729401, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -78.9
+      value: -85.05
       objectReference: {fileID: 0}
     - target: {fileID: 5038693557434397201, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20742,7 +20890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481838053227115560, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -76.56999
+      value: -82.71999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20933,6 +21081,10 @@ PrefabInstance:
     - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
       propertyPath: m_Name
       value: copagrandetopo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441258267275178261, guid: 8f122b3f41d1f374ea329276ea667ca1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21311,6 +21463,10 @@ PrefabInstance:
     - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
       propertyPath: m_Name
       value: arvorepequena
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029808573299745, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
