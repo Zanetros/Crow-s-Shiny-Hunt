@@ -8,10 +8,12 @@ public class LevelChooser : MonoBehaviour
 {
     public Button startSelectecButtom;
     public Button backSelectedButtom;
+    public Button optionsSelectedButtom;
 
     [Header("Botão Jogar")]
     public GameObject mainScreen;
     public GameObject levelScreen;
+    public GameObject options;
 
     [Header("Voltar dos Levels")]
     public GameObject backPanel;
@@ -33,6 +35,20 @@ public class LevelChooser : MonoBehaviour
         levelScreen.SetActive(false);
         mainScreen.SetActive(true);
         startSelectecButtom.Select();
+    }
+
+    public void BackFromConfig()
+    {
+        options.SetActive(false);
+        mainScreen.SetActive(true);
+        startSelectecButtom.Select();
+    }
+
+    public void OpenConfig()
+    {
+        optionsSelectedButtom.Select();
+        mainScreen.SetActive(false);
+        options.SetActive(true);
     }
 
     public void BackToLevel(GameObject levelPanel)
