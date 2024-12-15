@@ -6,31 +6,49 @@ using UnityEngine.UI;
 
 public class LevelChooser : MonoBehaviour
 {
+    public Button startSelectecButtom;
+    public Button backSelectedButtom;
+
     [Header("Botão Jogar")]
-    public GameObject levelPanel;
-    public GameObject menuButtons;
-    public Button selectedButtom;
+    public GameObject mainScreen;
+    public GameObject levelScreen;
 
     [Header("Voltar dos Levels")]
     public GameObject backPanel;
 
     public void Start()
     {
-        selectedButtom.Select();
+        startSelectecButtom.Select();
     }
 
-    public void Play()
+    public void LevelScreen()
     {
-        menuButtons.SetActive(false);
-        levelPanel.SetActive(true);
-        backPanel.SetActive(true);
+        mainScreen.SetActive(false);
+        levelScreen.SetActive(true);
+        backSelectedButtom.Select();
     }
 
     public void BackToMenu()
     {     
-        backPanel.SetActive(false);
+        levelScreen.SetActive(false);
+        mainScreen.SetActive(true);
+        startSelectecButtom.Select();
+    }
+
+    public void BackToLevel(GameObject levelPanel)
+    {
         levelPanel.SetActive(false);
-        menuButtons.SetActive(true);
+        backSelectedButtom.Select();
+    }
+
+    public void ChooseLevel(GameObject panel)
+    {
+        panel.SetActive(true); 
+    }
+
+    public void ButtomSelected(Button selected)
+    {
+        selected.Select();
     }
 
     public void PlayLevelNumber(int level)
