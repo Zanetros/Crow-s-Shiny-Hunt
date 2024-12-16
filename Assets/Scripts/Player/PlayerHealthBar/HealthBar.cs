@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    private int currentScene;
     [SerializeField] Animator animator;
     [SerializeField] BoxCollider playerCol;
+    [SerializeField] private AudioClip bumpSound;
+    [SerializeField] private AudioSource AudioSource;
     public bool ghostMode;
 
     [Header("Corroutine Variables")]
@@ -37,6 +38,7 @@ public class HealthBar : MonoBehaviour
             {
                 StartCoroutine(WaitForBumping());
                 StartCoroutine(CollisionInvencibility());
+                AudioSource.PlayOneShot(bumpSound);
                 hearts--;
                 if (hearts == 2)
                 {

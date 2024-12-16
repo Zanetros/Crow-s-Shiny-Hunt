@@ -51,6 +51,11 @@ public class LevelChooser : MonoBehaviour
         options.SetActive(true);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void BackToLevel(GameObject levelPanel)
     {
         levelPanel.SetActive(false);

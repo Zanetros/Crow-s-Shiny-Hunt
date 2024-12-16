@@ -23,6 +23,9 @@ public class ScoreManager : MonoBehaviour
 
     public Button selectedButton;
 
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip audioClip;
+
     public float timeToFinish;
     public TextMeshProUGUI rankText;
     public GameObject rankPanel;
@@ -38,7 +41,6 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Barra de Vida")]
     public HealthBar healthBar;
-    private int currentScene;
 
     private void Awake()
     {
@@ -58,6 +60,7 @@ public class ScoreManager : MonoBehaviour
         {
             StartCoroutine(WaitForDeath());
             isDead = true;
+            AudioSource.PlayOneShot(audioClip);
             selectedButton.Select();
             rankPanel.SetActive(true);
             rankText.text = "F";
