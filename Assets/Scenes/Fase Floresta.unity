@@ -21009,6 +21009,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: field of view
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_FocalLength
+      value: 20.78461
+      objectReference: {fileID: 0}
+    - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: near clip plane
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_BackGroundColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -21023,6 +21035,10 @@ PrefabInstance:
     - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432774950518496065, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1670715375466165231, guid: 119dcdcd23369a74e821b028ec748720, type: 3}
       propertyPath: m_Mass
