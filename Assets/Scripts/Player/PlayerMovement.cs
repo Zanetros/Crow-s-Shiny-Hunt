@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerControls playerControls;
     public MenuManager menuManager;
 
-    [Header("Movimentação")]
+    [Header("Movimentaï¿½ï¿½o")]
     public static float moveSpeed;
     public float defaultMoveSpeed;
     public float horizontalSpeed;
@@ -25,8 +25,10 @@ public class PlayerMovement : MonoBehaviour
     private bool max;
     private bool min;
     private bool normal;
+    
+    [SerializeField] GameObject velocityEffect;
 
-    [Header("Animação")]
+    [Header("Animaï¿½ï¿½o")]
     [SerializeField] private Animator animator;
     public string Fast = "Fast";
 
@@ -147,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (moveSpeed >= maxVelocity)
             {
-                Debug.Log("Maximo");
+                Debug.Log("MÃ¡ximo");
             }
 
             else if (moveSpeed <= maxVelocity)
@@ -197,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
         else if (max)
         {
             maxSprite.SetActive(true);
+            velocityEffect.SetActive(true);
             normalSprite.SetActive(false);
         }
 
@@ -204,6 +207,7 @@ public class PlayerMovement : MonoBehaviour
         {
             maxSprite.SetActive(false);
             minSprite.SetActive(false);
+            velocityEffect.SetActive(false);
             normalSprite.SetActive(true);
         }
     }
