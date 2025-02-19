@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_moeda
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02697d63f4563d544b775a0a103ee7f8, type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71,6 +75,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02697d63f4563d544b775a0a103ee7f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2857012441899658238}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02697d63f4563d544b775a0a103ee7f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4479806551126288664}
   m_SourcePrefab: {fileID: 100100000, guid: 02697d63f4563d544b775a0a103ee7f8, type: 3}
 --- !u!1 &4096149482143468104 stripped
 GameObject:
@@ -100,3 +107,15 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 2.328306e-10, z: 4.656612e-10}
+--- !u!114 &4479806551126288664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096149482143468104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f80b96efd90734c934a0dd23a50c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
