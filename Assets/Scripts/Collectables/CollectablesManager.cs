@@ -11,7 +11,7 @@ public class CollectablesManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance = null)
+        if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
             Instance = this;

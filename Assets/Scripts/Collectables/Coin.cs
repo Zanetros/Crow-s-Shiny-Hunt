@@ -11,7 +11,8 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
-            CollectablesManager.Instance.coinCount++;
+            CollectablesManager.Instance.coinCount += 1;
+            CollectableInterface.instance.ManageUI();
         }
     }
 }
