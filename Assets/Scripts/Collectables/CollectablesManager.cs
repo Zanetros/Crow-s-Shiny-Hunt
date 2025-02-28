@@ -22,6 +22,6 @@ public class CollectablesManager : MonoBehaviour
 
     public void Start()
     {
-        coinsMenu = coinsCollected;
+        coinsMenu =+ coinsCollected;
     }
 }

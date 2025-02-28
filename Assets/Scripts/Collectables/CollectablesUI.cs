@@ -21,7 +21,7 @@ public class CollectablesUI : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log(PlayerPrefs.GetInt("coins"));
+        PlayerPrefs.SetInt("coins", 0);
         CollectablesManager.coinsCollected = 0;
         cointText.text = "X" + PlayerPrefs.GetInt("coins").ToString();
     }

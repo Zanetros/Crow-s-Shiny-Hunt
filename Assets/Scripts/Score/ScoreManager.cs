@@ -154,9 +154,9 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishLevel()
     {
-        scene = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("coins", CollectablesManager.coinsCollected);
         rankPanel.SetActive(false);
         Time.timeScale = 1;
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(0);
     }
 }

@@ -12,7 +12,6 @@ public class Coin : MonoBehaviour
         {
             CollectablesManager.coinsCollected += 1;
             CollectablesUI.instance.ManageUI();
-            PlayerPrefs.SetInt("coins", CollectablesManager.coinsCollected);
             Destroy(gameObject);
         }
     }
