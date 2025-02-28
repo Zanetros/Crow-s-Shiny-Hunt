@@ -8144,6 +8144,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1cd4fa3461d1194db19170737f3b69a, type: 3}
+--- !u!1 &780576464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780576466}
+  - component: {fileID: 780576465}
+  m_Layer: 0
+  m_Name: CollectablesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &780576465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780576464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55af089cb94774c44b46356ef3218589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &780576466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780576464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 886.71106, y: 582.4957, z: 1.7540438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &782328993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8273236213777034058, guid: c956b86b35689c249a7136ba3203b472, type: 3}
@@ -24843,7 +24887,6 @@ GameObject:
   - component: {fileID: 4000824666675728084}
   - component: {fileID: 2372645485336213857}
   - component: {fileID: 4979462891267678452}
-  - component: {fileID: 7412461114697565011}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -24851,18 +24894,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7412461114697565011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7412461114697565010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55af089cb94774c44b46356ef3218589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7721465990375825803
 GameObject:
   m_ObjectHideFlags: 0
@@ -25539,3 +25570,4 @@ SceneRoots:
   - {fileID: 1989190683}
   - {fileID: 7798467291155636127}
   - {fileID: 1554125863}
+  - {fileID: 780576466}
