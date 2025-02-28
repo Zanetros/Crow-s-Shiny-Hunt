@@ -21,12 +21,8 @@ public class LevelBoundary : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
         }
-        else if (instance != null)
-        {
-            Destroy(this);
-        }
+        
     }
 
     private void Update()

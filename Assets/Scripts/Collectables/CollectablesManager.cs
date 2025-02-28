@@ -5,18 +5,23 @@ using UnityEngine;
 
 public class CollectablesManager : MonoBehaviour
 {
-    public static CollectablesManager Instance;
-
-    public int coinCount;
+    public static CollectablesManager instance;
+    
+    public static int coinsCollected;
+    public static int coinsMenu;
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-        else Destroy(gameObject);
+        else Destroy(this.gameObject);
+    }
 
+    public void Start()
+    {
+        coinsMenu = coinsCollected;
     }
 }

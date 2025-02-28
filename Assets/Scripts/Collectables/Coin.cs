@@ -10,9 +10,10 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            CollectablesManager.coinsCollected += 1;
+            CollectablesUI.instance.ManageUI();
+            PlayerPrefs.SetInt("coins", CollectablesManager.coinsCollected);
             Destroy(gameObject);
-            CollectablesManager.Instance.coinCount += 1;
-            CollectableInterface.instance.ManageUI();
         }
     }
 }
