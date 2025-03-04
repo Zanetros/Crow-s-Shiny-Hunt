@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class CollectablesInterface : MonoBehaviour
 {
-   public TextMeshProUGUI coinText;
+    public TextMeshProUGUI coinText;
 
-   private void Start()
-   {
-      coinText.text = "X " + PlayerPrefs.GetInt("coins", CollectablesManager.coinsMenu).ToString();
-   }
+    private void Start()
+    {
+        CollectablesManager.coinsMenu += PlayerPrefs.GetInt("coins");
+        coinText.text = "X " + CollectablesManager.coinsMenu;        
+    }
 }

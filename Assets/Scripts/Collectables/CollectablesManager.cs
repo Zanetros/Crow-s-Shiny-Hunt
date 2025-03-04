@@ -20,8 +20,8 @@ public class CollectablesManager : MonoBehaviour
         else Destroy(this.gameObject);
     }
 
-    public void Start()
+    private void Update()
     {
-        coinsMenu =+ coinsCollected;
+        Debug.Log(coinsCollected);
     }
 }

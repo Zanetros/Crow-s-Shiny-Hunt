@@ -94,18 +94,15 @@ public class ScoreManager : MonoBehaviour
         {
             if (_time <= timeToFinish)
             {
-                Debug.Log("S");
                 rankS = true;
             }
             else if (_time <= rank_A * timeToFinish) // only reach here if _time > timeToFinish
             {
-                Debug.Log("A");
                 rankS = false;
                 rankA = true;
             }
             else if (_time <= rank_B * timeToFinish) //only reach here if _time > 1.3 * timeToFinish
             {
-                Debug.Log("B");
                 rankA = false;
                 rankB = true;
             }
@@ -115,13 +112,11 @@ public class ScoreManager : MonoBehaviour
         {
             if (healthBar.hearts == 2) // only reach here if _time > timeToFinish
             {
-                Debug.Log("A");
                 rankS = false;
                 rankA = true;
             }
             else if (healthBar.hearts == 1) //only reach here if _time > 1.3 * timeToFinish
             {
-                Debug.Log("B");
                 rankA = false;
                 rankB = true;
             }
