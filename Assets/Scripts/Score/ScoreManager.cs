@@ -85,7 +85,15 @@ public class ScoreManager : MonoBehaviour
         }
         _time = Time.timeSinceLevelLoad;
         TimeSpan time = TimeSpan.FromSeconds(_time);
-        timerText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        if (_time < 10)
+        {
+            timerText.text = time.Minutes.ToString() + ":0" + time.Seconds.ToString();
+        }
+        else
+        {
+
+            timerText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        }
     }
 
     public void TimeToFinish()
