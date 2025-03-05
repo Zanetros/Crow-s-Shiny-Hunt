@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     [Header("Tempo")]
     public TextMeshProUGUI timerText;
     public float _time;
-    private int scene;
+    public int addDecimal;
     public bool timeStoped;
 
     [Header("Animação")]

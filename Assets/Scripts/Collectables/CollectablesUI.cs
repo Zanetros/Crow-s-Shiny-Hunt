@@ -7,7 +7,7 @@ using UnityEngine;
 public class CollectablesUI : MonoBehaviour
 {
     public TextMeshProUGUI cointText;
-    
+
     public static CollectablesUI instance;
 
     private void Awake()
@@ -22,11 +22,11 @@ public class CollectablesUI : MonoBehaviour
     public void Start()
     {
         CollectablesManager.coinsCollected = 0;
-        cointText.text = "X" + CollectablesManager.coinsCollected;
+        cointText.text = CollectablesManager.coinsCollected + "/6";
     }
 
     public void ManageUI()
     {
-        cointText.text = "X" + CollectablesManager.coinsCollected.ToString();
+        cointText.text = CollectablesManager.coinsCollected + "/6";
     }
 }
