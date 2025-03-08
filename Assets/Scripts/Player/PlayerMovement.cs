@@ -138,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnFaster()
     {
+        if (isDead || menuManager.isPaused) return;
         if (min)
         {
             moveSpeed = defaultMoveSpeed;
@@ -164,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnSlower()
     {
+        if (isDead || menuManager.isPaused) return;
         if (max)
         {
             moveSpeed = defaultMoveSpeed;
@@ -190,6 +192,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeVelocityUI()
     {
+        if (isDead || menuManager.isPaused) return;
         if (min)
         {
             minSprite.SetActive(true);

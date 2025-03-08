@@ -1988,7 +1988,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135663064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.4}
   m_LocalScale: {x: 0.5973296, y: 0.5312102, z: 0.62524}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10777,7 +10777,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943398129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11550,6 +11550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1554125863}
     m_Modifications:
+    - target: {fileID: 2582970724593462173, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 412726271b9757947aeec4c9aac375bd, type: 2}
     - target: {fileID: 3716493256112967922, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.15
@@ -25812,10 +25816,10 @@ RectTransform:
   - {fileID: 375969340}
   - {fileID: 3498137021785330272}
   - {fileID: 4138495483583862955}
+  - {fileID: 1873299760}
   - {fileID: 7169836151871297907}
   - {fileID: 392342710717717465}
   - {fileID: 2170606353013329840}
-  - {fileID: 1873299760}
   m_Father: {fileID: 7798467291155636127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -26007,6 +26011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e05777bc627cf47affc61a90ec35df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
   scoreManager: {fileID: 2372645485336213857}
   menuPanel: {fileID: 327550789556992774}
   selectedButton: {fileID: 5428168237703174958}
@@ -27250,6 +27255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1554125863}
     m_Modifications:
+    - target: {fileID: 2582970724593462173, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 412726271b9757947aeec4c9aac375bd, type: 2}
     - target: {fileID: 3716493256112967922, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.73

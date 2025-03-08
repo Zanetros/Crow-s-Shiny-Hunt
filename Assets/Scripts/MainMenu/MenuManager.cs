@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     private int currentScene;
+    public bool isPaused;
     public ScoreManager scoreManager;
     
     [Header("Painel Menu")]
@@ -21,15 +22,14 @@ public class MenuManager : MonoBehaviour
         
         if (!openMenu)
         {
-            Debug.Log("Menu Open");
+            isPaused = true;
             selectedButton.Select();
             Time.timeScale = 0f;
             menuPanel.SetActive(true);
         }
         else
         {
-
-            Debug.Log("Menu Closed");
+            isPaused = false;
             menuPanel.SetActive(false);
             Time.timeScale = 1f;
         }
