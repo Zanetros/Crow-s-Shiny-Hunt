@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
         {
             CollectablesManager.coinsCollected += 1;
             CollectablesUI.instance.ManageUI();
-            Destroy(gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

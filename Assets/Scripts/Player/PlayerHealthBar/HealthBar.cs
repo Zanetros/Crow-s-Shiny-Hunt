@@ -49,7 +49,6 @@ public class HealthBar : MonoBehaviour
                     heartSprite2.SetActive(false);
                 }
             }
-            else { Debug.Log("Ghosting"); }
         }               
     }
 
