@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     
     [Header("Painel Menu")]
     public GameObject menuPanel;
+    public GameObject optionsMenu;
     public Button selectedButton;
 
     private bool openMenu;
@@ -47,5 +48,17 @@ public class MenuManager : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void GoToOptions()
+    {
+        optionsMenu.SetActive(true);
+        menuPanel.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        optionsMenu.SetActive(false);
+        menuPanel.SetActive(true);
     }
 }
