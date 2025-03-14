@@ -159,6 +159,7 @@ public class ScoreManager : MonoBehaviour
     public void FinishLevel()
     {
         DataPersistenceManager.instance.SaveGame();
+        DataPersistenceManager.instance.LoadGame();
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);

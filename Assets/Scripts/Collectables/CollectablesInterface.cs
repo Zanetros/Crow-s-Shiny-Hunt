@@ -8,10 +8,8 @@ public class CollectablesInterface : MonoBehaviour
 {
     public TextMeshProUGUI coinText;
 
-    private void Start()
+    private void Update()
     {
-        //CollectablesManager.coinsMenu += PlayerPrefs.GetInt("coins");
-        CollectablesManager.coinsMenu =+ CollectablesManager.coinsCollected;
         coinText.text = "X " + CollectablesManager.coinsMenu;        
     }
 }

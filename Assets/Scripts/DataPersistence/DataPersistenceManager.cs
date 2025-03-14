@@ -9,7 +9,7 @@ public class DataPersistenceManager : MonoBehaviour
     [Header("File Storage Config")] [SerializeField]
     private string fileName;
     
-    private GameData gameData;
+    public GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
     
@@ -68,6 +68,8 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.SaveData(ref gameData);
         }
+
+        Debug.Log("Number of coins collected: " + gameData.coinsCollected);
         
         dataHandler.Save(gameData);
     }

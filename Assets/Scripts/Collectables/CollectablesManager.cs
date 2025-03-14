@@ -22,11 +22,11 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        coinsCollected = data.coinsCollected;
+        coinsMenu = data.coinsCollected;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.coinsCollected = coinsCollected;
+        data.coinsCollected += coinsCollected;
     }
 }
