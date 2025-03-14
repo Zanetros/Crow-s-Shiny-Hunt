@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public int addDecimal;
     public bool timeStoped;
 
-    [Header("Animação")]
+    [Header("Animaï¿½ï¿½o")]
     [SerializeField] Animator animator;
     public string death = "Death";
 
@@ -157,7 +158,7 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishLevel()
     {
-        PlayerPrefs.SetInt("coins", CollectablesManager.coinsCollected);
+        DataPersistenceManager.instance.SaveGame();
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);

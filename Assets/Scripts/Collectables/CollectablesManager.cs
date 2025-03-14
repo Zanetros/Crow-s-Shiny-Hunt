@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectablesManager : MonoBehaviour
+public class CollectablesManager : MonoBehaviour, IDataPersistence
 {
     public static CollectablesManager instance;
     
@@ -20,8 +20,13 @@ public class CollectablesManager : MonoBehaviour
         else Destroy(this.gameObject);
     }
 
-    private void Update()
+    public void LoadData(GameData data)
     {
-        Debug.Log(coinsCollected);
+        coinsCollected = data.coinsCollected;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.coinsCollected = coinsCollected;
     }
 }

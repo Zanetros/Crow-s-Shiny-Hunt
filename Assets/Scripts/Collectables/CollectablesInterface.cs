@@ -10,7 +10,8 @@ public class CollectablesInterface : MonoBehaviour
 
     private void Start()
     {
-        CollectablesManager.coinsMenu += PlayerPrefs.GetInt("coins");
+        //CollectablesManager.coinsMenu += PlayerPrefs.GetInt("coins");
+        CollectablesManager.coinsMenu =+ CollectablesManager.coinsCollected;
         coinText.text = "X " + CollectablesManager.coinsMenu;        
     }
 }
