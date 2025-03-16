@@ -8,6 +8,8 @@ public class CollectablesUI : MonoBehaviour
 {
     public TextMeshProUGUI cointText;
 
+    [SerializeField] private List<GameObject> collectedCoins;
+
     public static CollectablesUI instance;
 
     private void Awake()
@@ -22,7 +24,7 @@ public class CollectablesUI : MonoBehaviour
     public void Start()
     {
         CollectablesManager.coinsCollected = 0;
-        cointText.text = CollectablesManager.coinsCollected + "/6";
+        ManageUI();
     }
 
     public void ManageUI()

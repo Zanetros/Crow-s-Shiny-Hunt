@@ -34,7 +34,7 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
     }
-
+    
     public void LoadGame()
     {
         this.gameData = dataHandler.Load();
@@ -54,6 +54,8 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
+        
+        Debug.Log("List of coins collected " + gameData.collectedCoins.Count);
     }
 
     public void SaveGame()
@@ -70,6 +72,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
 
         Debug.Log("Number of coins collected: " + gameData.coinsCollected);
+        Debug.Log("List of coins collected " + gameData.collectedCoins.Count);
         
         dataHandler.Save(gameData);
     }
@@ -80,5 +83,23 @@ public class DataPersistenceManager : MonoBehaviour
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);
+    }
+
+    public void AddCoin(string id, bool collected)
+    {
+        if (gameData.collectedCoins.ContainsKey(id))
+        {
+            gameData.collectedCoins.Remove(id);
+        }
+        gameData.collectedCoins.Add(id, collected);
+    }
+
+    public void LoadCoin(string id, bool collected, GameObject gameObject)
+    {
+        gameData.collectedCoins.TryGetValue(id, out collected);
+        if (collected)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
