@@ -24,6 +24,15 @@ public class CollectablesUI : MonoBehaviour
     public void Start()
     {
         CollectablesManager.coinsCollected = 0;
+
+        for (int i = 0; i < collectedCoins.Count; i++)
+        {
+            if (!collectedCoins[i].gameObject.activeSelf)
+            {
+                CollectablesManager.coinsCollected++;
+            }
+        }
+
         ManageUI();
     }
 
