@@ -102,4 +102,17 @@ public class DataPersistenceManager : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void ClearCoins()
+    {
+        gameData.collectedCoins.Clear();
+    }
+
+    public void CountCoins(int count)
+    {
+        if (gameData.collectedCoins != null)
+        {
+            count = gameData.collectedCoins.Count();
+        }
+    }
 }

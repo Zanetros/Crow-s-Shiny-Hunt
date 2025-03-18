@@ -7,6 +7,7 @@ using UnityEngine;
 public class CollectablesUI : MonoBehaviour
 {
     public TextMeshProUGUI cointText;
+    public int collectablesCount;
 
     [SerializeField] private List<GameObject> collectedCoins;
 
@@ -24,12 +25,13 @@ public class CollectablesUI : MonoBehaviour
     public void Start()
     {
         CollectablesManager.coinsCollected = 0;
+        collectablesCount = CollectablesManager.coinsCollected;       
 
         for (int i = 0; i < collectedCoins.Count; i++)
         {
             if (!collectedCoins[i].gameObject.activeSelf)
             {
-                CollectablesManager.coinsCollected++;
+                collectablesCount++;
             }
         }
 
@@ -38,6 +40,7 @@ public class CollectablesUI : MonoBehaviour
 
     public void ManageUI()
     {
-        cointText.text = CollectablesManager.coinsCollected + "/6";
+        DataPersistenceManager.instance.CountCoins(collectablesCount);
+        cointText.text = collectablesCount + "/6";
     }
 }

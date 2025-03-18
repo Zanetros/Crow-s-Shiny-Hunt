@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Coin : MonoBehaviour, IDataPersistence
+public class Coin : MonoBehaviour
 {
     [SerializeField] private bool collected = false;
     
@@ -25,23 +25,5 @@ public class Coin : MonoBehaviour, IDataPersistence
             DataPersistenceManager.instance.AddCoin(id, collected);
             gameObject.SetActive(false);
         }
-    }
-
-    public void LoadData(GameData data)
-    {
-        data.collectedCoins.TryGetValue(id, out collected);
-        if (collected)
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        if (data.collectedCoins.ContainsKey(id))
-        {
-            data.collectedCoins.Remove(id);
-        }
-        data.collectedCoins.Add(id, collected);
     }
 }
