@@ -105,14 +105,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void ClearCoins()
     {
-        gameData.collectedCoins.Clear();
-    }
-
-    public void CountCoins(int count)
-    {
-        if (gameData.collectedCoins != null)
-        {
-            count = gameData.collectedCoins.Count();
-        }
+        
     }
 }

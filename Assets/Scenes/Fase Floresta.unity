@@ -22707,6 +22707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cointText: {fileID: 943398131}
+  coinsToCollect: 6
+  collectablesCount: 0
   collectedCoins:
   - {fileID: 325818953}
   - {fileID: 1950339042}
