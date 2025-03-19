@@ -11,7 +11,9 @@ public class CollectablesUI : MonoBehaviour
     public int coinsToCollect;
     public int collectablesCount;
 
-    [SerializeField] private List<GameObject> collectedCoins;
+    public List<GameObject> collectedCoins;
+    public List<Coin> coins;
+
 
     public static CollectablesUI instance;
 

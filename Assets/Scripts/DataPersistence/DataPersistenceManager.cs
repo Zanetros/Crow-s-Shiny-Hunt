@@ -102,9 +102,4 @@ public class DataPersistenceManager : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-    public void ClearCoins()
-    {
-        
-    }
 }

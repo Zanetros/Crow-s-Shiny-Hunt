@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -158,10 +159,22 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishLevel()
     {
+        FinalizeCoins();
         DataPersistenceManager.instance.SaveGame();
         DataPersistenceManager.instance.LoadGame();
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    public void FinalizeCoins()
+    {
+        for (int i = 0; i < CollectablesUI.instance.coins.Count; i++)
+        {
+            if (!CollectablesUI.instance.coins[i].gameObject.activeSelf)
+            {
+                DataPersistenceManager.instance.AddCoin(CollectablesUI.instance.coins[i].id, CollectablesUI.instance.coins[i].collected = true);
+            }
+        }
     }
 }

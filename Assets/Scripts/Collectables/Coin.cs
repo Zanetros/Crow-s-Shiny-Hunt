@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private bool collected = false;
+    public bool collected = false;
     
-    [SerializeField] private string id;
+    public string id;
 
     private void Start()
     {
@@ -22,7 +22,6 @@ public class Coin : MonoBehaviour
             CollectablesManager.coinsCollected += 1;
             collected = true;
             CollectablesUI.instance.ManageUI();
-            DataPersistenceManager.instance.AddCoin(id, collected);
             gameObject.SetActive(false);
         }
     }

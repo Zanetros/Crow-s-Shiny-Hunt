@@ -41,14 +41,12 @@ public class MenuManager : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
         CollectablesUI.instance.cointText.text = "X " + PlayerPrefs.GetInt("coins");
-        DataPersistenceManager.instance.ClearCoins();
         SceneManager.LoadScene(currentScene);
         Time.timeScale = 1f;
     }
 
     public void ReturnToMenu()
     {
-        DataPersistenceManager.instance.ClearCoins();
         SceneManager.LoadScene(0);
     }
 
