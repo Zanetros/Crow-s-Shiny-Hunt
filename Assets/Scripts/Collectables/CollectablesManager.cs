@@ -8,7 +8,6 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     public static CollectablesManager instance;
     
     public static int coinsCollected;
-    public int _coinscollected;
     public static int coinsMenu;
 
     private void Awake()
@@ -19,11 +18,6 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
             DontDestroyOnLoad(this.gameObject);
         }
         else Destroy(this.gameObject);
-    }
-
-    private void Update()
-    {
-        _coinscollected = coinsCollected;
     }
 
     public void LoadData(GameData data)

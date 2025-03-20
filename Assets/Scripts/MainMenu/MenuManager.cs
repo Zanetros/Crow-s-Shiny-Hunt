@@ -40,7 +40,6 @@ public class MenuManager : MonoBehaviour
     public void RestartLevel()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
-        CollectablesUI.instance.cointText.text = "X " + PlayerPrefs.GetInt("coins");
         SceneManager.LoadScene(currentScene);
         Time.timeScale = 1f;
     }

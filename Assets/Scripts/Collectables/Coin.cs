@@ -13,6 +13,11 @@ public class Coin : MonoBehaviour
     private void Start()
     {
         DataPersistenceManager.instance.LoadCoin(id, collected, this.gameObject);
+        
+        if (!gameObject.activeSelf)
+        {
+            CollectablesUI.instance.collectablesCount++;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
