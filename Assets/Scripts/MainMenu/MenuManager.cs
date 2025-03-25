@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
 
     public void OpenMenu()
     {      
-        if (scoreManager.isDead) {  return; }
+        if (scoreManager.isDead | scoreManager.levelCompleted) {  return; }
         
         if (!openMenu)
         {
@@ -32,6 +32,7 @@ public class MenuManager : MonoBehaviour
         {
             isPaused = false;
             menuPanel.SetActive(false);
+            optionsMenu.SetActive(false);
             Time.timeScale = 1f;
         }
         openMenu = !openMenu;

@@ -14,11 +14,11 @@ public class LevelManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             audioSource.PlayOneShot(clip);
-            scoreManager.isDead = true;
+            scoreManager.levelCompleted = true;
             scoreManager.selectedButton.Select();
             PlayerMovement.moveSpeed -= 0f;
             scoreManager.timeStoped = true;
-            PlayerMovement.isDead = true;
+            PlayerMovement.levelCompleted = true;
             MoveCamera.isDeadCamera = true;
             scoreManager.ScoreText();
         }

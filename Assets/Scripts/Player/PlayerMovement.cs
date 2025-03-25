@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float defaultMoveSpeed;
     public float horizontalSpeed;
     public static bool isDead;
+    public static bool levelCompleted;
 
     [Header("Mecanica de velocidade")]
     public float maxVelocity = 15f;
@@ -55,13 +56,14 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         isDead = false;
+        levelCompleted = false;
         normal = true;
         moveSpeed = defaultMoveSpeed;
     }
 
     private void Update()
     {
-        if (isDead) return;
+        if (isDead | levelCompleted) return;
 
         MovePlayerForward();
 

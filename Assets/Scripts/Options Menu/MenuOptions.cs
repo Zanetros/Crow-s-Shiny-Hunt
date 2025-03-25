@@ -17,8 +17,6 @@ public class MenuOptions : MonoBehaviour
     public void Start()
     {
         fullScreenTog.isOn = Screen.fullScreen;
-        
-        
     }
 
     public void ApplyConfigs()

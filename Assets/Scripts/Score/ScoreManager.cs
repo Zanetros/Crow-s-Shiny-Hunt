@@ -32,6 +32,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI rankText;
     public GameObject rankPanel;
     public bool isDead = false;
+    public bool levelCompleted = false;
 
     public bool rankS;
     public bool rankA;
@@ -49,6 +50,7 @@ public class ScoreManager : MonoBehaviour
         Time.timeScale = 1f;
         rankPanel.SetActive(false);
         isDead = false;
+        levelCompleted = false;
     }
 
     private void Update()
@@ -56,7 +58,7 @@ public class ScoreManager : MonoBehaviour
         Timer();
         TimeToFinish();
 
-        if (isDead) { return; }
+        if (isDead | levelCompleted) { return; }
 
         if (healthBar.hearts == 0)
         {
@@ -159,9 +161,13 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishLevel()
     {
-        FinalizeCoins();
-        DataPersistenceManager.instance.SaveGame();
-        DataPersistenceManager.instance.LoadGame();
+        if (levelCompleted)
+        {
+            FinalizeCoins();
+            DataPersistenceManager.instance.SaveGame();
+            DataPersistenceManager.instance.LoadGame();
+        }
+        
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
