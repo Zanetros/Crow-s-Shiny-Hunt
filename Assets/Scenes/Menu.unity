@@ -1659,7 +1659,7 @@ MonoBehaviour:
   leftArrow: {fileID: 33155384}
   rightArrow: {fileID: 1589740430}
   leftLimit: 0
-  rightLimit: -1230
+  rightLimit: 1750
 --- !u!1 &838799768
 GameObject:
   m_ObjectHideFlags: 0
