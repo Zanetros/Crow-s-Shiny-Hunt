@@ -1696,6 +1696,9 @@ MonoBehaviour:
     collectedCoins:
       keys: []
       values: 
+    unlockedLevels:
+      keys: []
+      values: 
 --- !u!4 &838799770
 Transform:
   m_ObjectHideFlags: 0
@@ -2993,6 +2996,7 @@ GameObject:
   - component: {fileID: 1517879251}
   - component: {fileID: 1517879250}
   - component: {fileID: 1517879249}
+  - component: {fileID: 1517879252}
   m_Layer: 5
   m_Name: Fase 2
   m_TagString: Untagged
@@ -3101,6 +3105,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517879247}
   m_CullTransparentMesh: 1
+--- !u!114 &1517879252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517879247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210d50bac92439949ab4633e0b0269b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlocked: 0
+  id: 1
+  unlockedSprite: {fileID: 21300000, guid: b2ac3191d5655cf409829aa6a07e52b0, type: 3}
+  lockedSprite: {fileID: 1517879250}
 --- !u!1 &1589740430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,7 +3776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2007173632
 RectTransform:
   m_ObjectHideFlags: 0

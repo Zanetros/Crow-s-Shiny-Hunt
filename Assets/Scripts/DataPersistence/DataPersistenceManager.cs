@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class DataPersistenceManager : MonoBehaviour
 
         Debug.Log("Number of coins collected: " + gameData.coinsCollected);
         Debug.Log("List of coins collected " + gameData.collectedCoins.Count);
+        Debug.Log("unlocked levels" + gameData.unlockedLevels.Count);
         
         dataHandler.Save(gameData);
     }
@@ -100,6 +102,24 @@ public class DataPersistenceManager : MonoBehaviour
         if (collected)
         {
             gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveUnlockedLevel(string id, bool unlocked)
+    {
+        if (gameData.unlockedLevels.ContainsKey(id))
+        {
+            gameData.unlockedLevels.Remove(id);
+        }
+        gameData.unlockedLevels.Add(id, unlocked);
+    }
+
+    public void LoadUnlockedLevels(string id, bool unlocked, Image lockedSprite, Sprite unlockedSprite)
+    {
+        gameData.collectedCoins.TryGetValue(id, out unlocked);
+        if (unlocked)
+        {
+            lockedSprite.sprite = unlockedSprite;
         }
     }
 }
