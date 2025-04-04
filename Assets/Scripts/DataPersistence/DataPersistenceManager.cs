@@ -116,7 +116,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadUnlockedLevels(string id, bool unlocked, Image lockedSprite, Sprite unlockedSprite)
     {
-        gameData.collectedCoins.TryGetValue(id, out unlocked);
+        gameData.unlockedLevels.TryGetValue(id, out unlocked);
         if (unlocked)
         {
             lockedSprite.sprite = unlockedSprite;

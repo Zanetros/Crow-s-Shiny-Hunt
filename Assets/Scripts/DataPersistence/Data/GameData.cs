@@ -8,6 +8,8 @@ public class GameData
    public int coinsCollected;
    public int coinsTotal;
 
+   public bool levelUnlocked;
+
    public SerializableDictionary<string, bool> collectedCoins;
    public SerializableDictionary<string, bool> unlockedLevels;
 
@@ -17,5 +19,6 @@ public class GameData
         this.coinsTotal = 0;
         collectedCoins = new SerializableDictionary<string, bool>();
         unlockedLevels = new SerializableDictionary<string, bool>();
+        levelUnlocked = false;
    }
 }

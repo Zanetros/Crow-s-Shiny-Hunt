@@ -20,6 +20,11 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
         else Destroy(this.gameObject);
     }
 
+    public void Update()
+    {
+        Debug.Log(coinsMenu);
+    }
+
     public void LoadData(GameData data)
     {
         coinsMenu = data.coinsCollected;
@@ -27,6 +32,6 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        data.coinsCollected += coinsCollected;
+        data.coinsCollected = coinsCollected;
     }
 }
