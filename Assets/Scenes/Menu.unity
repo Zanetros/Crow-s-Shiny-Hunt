@@ -2089,7 +2089,6 @@ MonoBehaviour:
   gameData:
     coinsCollected: 0
     coinsTotal: 0
-    levelUnlocked: 0
     collectedCoins:
       keys: []
       values: 
@@ -3362,6 +3361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55af089cb94774c44b46356ef3218589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsCollected: 0
+  coinsMenu: 0
 --- !u!4 &1475419070
 Transform:
   m_ObjectHideFlags: 0
@@ -4739,7 +4740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1947055883
 RectTransform:
   m_ObjectHideFlags: 0

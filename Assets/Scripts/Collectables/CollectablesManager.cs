@@ -7,8 +7,8 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
 {
     public static CollectablesManager instance;
     
-    public static int coinsCollected;
-    public static int coinsMenu;
+    public  int coinsCollected;
+    public  int coinsMenu;
 
     private void Awake()
     {

@@ -10,6 +10,6 @@ public class CollectablesInterface : MonoBehaviour
 
     private void Update()
     {
-        coinText.text = "X " + CollectablesManager.coinsMenu;        
+        coinText.text = "X " + CollectablesManager.instance.coinsMenu;        
     }
 }

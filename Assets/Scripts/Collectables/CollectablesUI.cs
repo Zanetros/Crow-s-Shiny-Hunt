@@ -27,7 +27,7 @@ public class CollectablesUI : MonoBehaviour
 
     public void Start()
     {
-        CollectablesManager.coinsCollected = 0;       
+        CollectablesManager.instance.coinsCollected = 0;       
     }
 
     public void Update()
