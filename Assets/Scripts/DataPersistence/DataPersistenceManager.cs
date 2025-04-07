@@ -73,8 +73,6 @@ public class DataPersistenceManager : MonoBehaviour
         }
 
         Debug.Log("Number of coins collected: " + gameData.coinsCollected);
-        Debug.Log("List of coins collected " + gameData.collectedCoins.Count);
-        Debug.Log("unlocked levels" + gameData.unlockedLevels.Count);
         
         dataHandler.Save(gameData);
     }

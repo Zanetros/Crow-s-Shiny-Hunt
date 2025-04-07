@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LockedLevel : MonoBehaviour, IDataPersistence
+public class LockedLevel : MonoBehaviour
 {
     public bool unlocked;
 
@@ -18,19 +18,25 @@ public class LockedLevel : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
-        DataPersistenceManager.instance.LoadUnlockedLevels(id, unlocked, lockedSprite, unlockedSprite);      
+        DataPersistenceManager.instance.LoadUnlockedLevels(id, unlocked, lockedSprite, unlockedSprite);
+
+        if (lockedSprite.sprite == unlockedSprite)
+        {
+            unlocked = true;
+        }
     }
 
     public void UnlockLevel()
     {
         if (CollectablesManager.coinsMenu < costToUnlock)
         {
-            //tocar som de moedas não suficientes
+            //tocar som de moedas nï¿½o suficientes
             Debug.Log("moedas faltando");
         }
 
         else if (CollectablesManager.coinsMenu >= costToUnlock)
         {
+            CollectablesManager.coinsMenu =- costToUnlock;
             unlocked = true;
             Debug.Log("level desbloqueado");
             DataPersistenceManager.instance.SaveUnlockedLevel(id, unlocked);
@@ -67,15 +73,5 @@ public class LockedLevel : MonoBehaviour, IDataPersistence
         {
             lockedUI.SetActive(false);
         }
-    }
-
-    public void LoadData(GameData data)
-    {
-        unlocked = data.levelUnlocked;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        data.levelUnlocked = unlocked;
     }
 }
