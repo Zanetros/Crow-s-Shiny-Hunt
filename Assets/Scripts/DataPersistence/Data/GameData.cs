@@ -10,6 +10,7 @@ public class GameData
    
    public SerializableDictionary<string, bool> collectedCoins;
    public SerializableDictionary<string, bool> unlockedLevels;
+   public SerializableDictionary<string, int> levelsCoinsCollected;
 
    public GameData()
    {
@@ -17,5 +18,6 @@ public class GameData
         this.coinsTotal = 0;
         collectedCoins = new SerializableDictionary<string, bool>();
         unlockedLevels = new SerializableDictionary<string, bool>();
+        levelsCoinsCollected = new SerializableDictionary<string, int>();
    }
 }

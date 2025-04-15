@@ -11,6 +11,9 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static int levelCoinsCollected;
+    public static string currentLevel;
+    
     [Header("Tempo")]
     public TextMeshProUGUI timerText;
     public float _time;
@@ -51,6 +54,7 @@ public class ScoreManager : MonoBehaviour
         rankPanel.SetActive(false);
         isDead = false;
         levelCompleted = false;
+        currentLevel = SceneManager.GetActiveScene().name;
     }
 
     private void Update()

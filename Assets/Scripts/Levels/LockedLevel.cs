@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LockedLevel : MonoBehaviour
@@ -19,6 +20,7 @@ public class LockedLevel : MonoBehaviour
     private void Start()
     {
         DataPersistenceManager.instance.LoadUnlockedLevels(id, unlocked, lockedSprite, unlockedSprite);
+        //DataPersistenceManager.instance.LoadLevelCoins(ScoreManager.currentLevel, ScoreManager.levelCoinsCollected);
 
         if (lockedSprite.sprite == unlockedSprite)
         {

@@ -32,6 +32,6 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        data.coinsCollected = coinsCollected;
+        data.coinsCollected = coinsMenu;
     }
 }
