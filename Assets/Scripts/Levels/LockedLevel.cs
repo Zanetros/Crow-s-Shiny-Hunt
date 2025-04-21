@@ -30,7 +30,7 @@ public class LockedLevel : MonoBehaviour
 
     public void UnlockLevel()
     {
-        if (CollectablesManager.instance.coinsMenu < costToUnlock)
+        if (CollectablesManager.instance.coinsMenu <= costToUnlock)
         {
             //tocar som de moedas n�o suficientes
             Debug.Log("moedas faltando");
@@ -38,7 +38,7 @@ public class LockedLevel : MonoBehaviour
 
         else if (CollectablesManager.instance.coinsMenu >= costToUnlock)
         {
-            CollectablesManager.instance.coinsMenu =- costToUnlock;
+            CollectablesManager.instance.coinsMenu = CollectablesManager.instance.coinsMenu - costToUnlock;
             unlocked = true;
             Debug.Log("level desbloqueado");
             DataPersistenceManager.instance.SaveUnlockedLevel(id, unlocked);
