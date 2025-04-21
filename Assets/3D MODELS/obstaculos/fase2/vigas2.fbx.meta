@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4de55bdaa5e1c014987288977d977fd3
+guid: aacb95920d44042478af0a9507b0d2ae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tronco_textu
-    second: {fileID: 2100000, guid: 65297bfeeb9fc804abf15832d3019a4d, type: 2}
+      name: madeira_Estante
+    second: {fileID: 2100000, guid: 086f2e078754edd43aa34e3381f26360, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

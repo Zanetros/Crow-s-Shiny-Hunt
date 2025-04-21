@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: dfacdac3f7bc9af4da79068056018307
+guid: 57bfd2e20c5ed1c408ff1ddc95d070e7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madeira_Estante
+    second: {fileID: 2100000, guid: 086f2e078754edd43aa34e3381f26360, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

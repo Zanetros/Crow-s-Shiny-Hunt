@@ -3,7 +3,17 @@ guid: 3c5bef531d632de418e75d9b75d5c91e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tronco_anies
+    second: {fileID: 2100000, guid: c8510cbaa374a1d4196b9d6020889cce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tronco_textu
+    second: {fileID: 2100000, guid: 65297bfeeb9fc804abf15832d3019a4d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

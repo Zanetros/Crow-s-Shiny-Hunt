@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4de55bdaa5e1c014987288977d977fd3
+guid: 48416280ca8994942879a864b46cc591
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,7 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: tronco_textu
+      name: troncofino.002_tronco_aneisMat
+    second: {fileID: 2100000, guid: c8510cbaa374a1d4196b9d6020889cce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: troncofino.002_tronco_textuMat
     second: {fileID: 2100000, guid: 65297bfeeb9fc804abf15832d3019a4d, type: 2}
   materials:
     materialImportMode: 2
