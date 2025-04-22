@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d7df4127c28664fbff5840b5b4f97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: data.game
+  fileName: save.game
   gameData:
     coinsCollected: 0
     coinsTotal: 0
@@ -3364,6 +3364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55af089cb94774c44b46356ef3218589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fase1: 0
+  fase2: 0
+  fase3: 0
+  fase4: 0
   coinsCollected: 0
   coinsMenu: 0
 --- !u!4 &1475419070

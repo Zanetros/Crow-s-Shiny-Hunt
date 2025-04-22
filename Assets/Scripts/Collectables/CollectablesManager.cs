@@ -2,10 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectablesManager : MonoBehaviour, IDataPersistence
 {
     public static CollectablesManager instance;
+    public int fase1;
+    public int fase2;
+    public int fase3;
+    public int fase4;
     
     public  int coinsCollected;
     public  int coinsMenu;

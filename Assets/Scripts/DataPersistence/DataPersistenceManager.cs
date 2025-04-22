@@ -120,4 +120,18 @@ public class DataPersistenceManager : MonoBehaviour
             lockedSprite.sprite = unlockedSprite;
         }
     }
+
+    public void SaveCollectedCoins(string id, int collectedCoins)
+    {
+        if (gameData.levelsCoinsCollected.ContainsKey(id))
+        {
+            gameData.levelsCoinsCollected.Remove(id);
+        }
+        gameData.levelsCoinsCollected.Add(id, collectedCoins);
+    }
+
+    public void LoadCollectedCoins(string id, int collectedCoins)
+    {
+        gameData.levelsCoinsCollected.TryGetValue(id, out collectedCoins);
+    }
 }

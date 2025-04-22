@@ -47,6 +47,12 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Barra de Vida")]
     public HealthBar healthBar;
+    
+    [Header("Save Coin")]
+    public int fase1;
+    public int fase2;
+    public int fase3;
+    public int fase4;
 
     private void Awake()
     {
@@ -184,7 +190,22 @@ public class ScoreManager : MonoBehaviour
             if (!CollectablesUI.instance.coins[i].gameObject.activeSelf)
             {
                 DataPersistenceManager.instance.AddCoin(CollectablesUI.instance.coins[i].id, CollectablesUI.instance.coins[i].collected = true);
+                SaveCoins();
             }
+        }
+    }
+
+    public void SaveCoins()
+    {
+        if (SceneManager.GetActiveScene().name == "Fase Floresta")
+        {
+            fase1 = fase1 + CollectablesManager.instance.coinsCollected;
+            DataPersistenceManager.instance.SaveCollectedCoins("Fase Floresta", fase1);
+        }
+        
+        else if (SceneManager.GetActiveScene().name == "Fase Mansão teste")
+        {
+            DataPersistenceManager.instance.SaveCollectedCoins("Fase Mansão teste", fase2);
         }
     }
 }
