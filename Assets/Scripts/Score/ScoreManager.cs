@@ -199,13 +199,16 @@ public class ScoreManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Fase Floresta")
         {
-            fase1 = fase1 + CollectablesManager.instance.coinsCollected;
-            DataPersistenceManager.instance.SaveCollectedCoins("Fase Floresta", fase1);
+            fase1++;
+            CollectablesManager.instance.fase1 = fase1;
+            DataPersistenceManager.instance.SaveCollectedCoins("Fase Floresta", CollectablesManager.instance.fase1);
         }
         
         else if (SceneManager.GetActiveScene().name == "Fase Mansão teste")
         {
-            DataPersistenceManager.instance.SaveCollectedCoins("Fase Mansão teste", fase2);
+            fase2++;
+            CollectablesManager.instance.fase2 = fase2;
+            DataPersistenceManager.instance.SaveCollectedCoins("Fase Mansão teste", CollectablesManager.instance.fase2);
         }
     }
 }

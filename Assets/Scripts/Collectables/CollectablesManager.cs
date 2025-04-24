@@ -33,10 +33,14 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         coinsMenu = data.coinsCollected;
+        fase1 = data.fase1;
+        fase2 = data.fase2;
     }
 
     public void SaveData(ref GameData data)
     {
         data.coinsCollected = coinsMenu;
+        data.fase1 = fase1;
+        data.fase2 = fase2;
     }
 }

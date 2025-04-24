@@ -30,7 +30,7 @@ public class LockedLevel : MonoBehaviour
 
     public void UnlockLevel()
     {
-        if (CollectablesManager.instance.coinsMenu <= costToUnlock)
+        if (CollectablesManager.instance.coinsMenu < costToUnlock)
         {
             //tocar som de moedas n�o suficientes
             Debug.Log("moedas faltando");

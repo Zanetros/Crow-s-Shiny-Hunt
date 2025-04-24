@@ -25,7 +25,6 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CollectablesManager.instance.coinsMenu += 1;
-            CollectablesManager.instance.coinsCollected++;
             collected = true;
             CollectablesUI.instance.ManageUI();
             gameObject.SetActive(false);
