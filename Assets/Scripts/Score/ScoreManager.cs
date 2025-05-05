@@ -105,7 +105,6 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-
             timerText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
         }
     }

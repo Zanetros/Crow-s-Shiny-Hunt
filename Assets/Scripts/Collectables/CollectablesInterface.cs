@@ -32,6 +32,14 @@ public class CollectablesInterface : MonoBehaviour
     
     public void CoinsLevel2()
     {
+        if (CollectablesManager.instance.coinsMenu == 0)
+        {
+            fase2Text.text = "Moedas - 0/6";
+        }
         
+        else if (CollectablesManager.instance.coinsMenu > 0)
+        {
+            fase2Text.text = "Moedas - " + CollectablesManager.instance.fase2 + "/6";
+        }
     }
 }
