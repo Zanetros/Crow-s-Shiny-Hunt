@@ -53,6 +53,15 @@ public class ScoreManager : MonoBehaviour
     public int fase2;
     public int fase3;
     public int fase4;
+    
+    [Header("Sprites Ranks")]
+    public Image mainImage;
+    public Sprite spriteRankS;
+    public Sprite spriteRankA;
+    public Sprite spriteRankB;
+    public Sprite spriteRankF;
+    
+    
 
     private void Awake()
     {
@@ -77,7 +86,7 @@ public class ScoreManager : MonoBehaviour
             AudioSource.PlayOneShot(audioClip);
             selectedButton.Select();
             rankPanel.SetActive(true);
-            rankText.text = "F";
+            mainImage.sprite = spriteRankF;
         }
     }
 
@@ -149,21 +158,21 @@ public class ScoreManager : MonoBehaviour
         if (rankS)
         {
             rankPanel.SetActive(true);
-            rankText.text = "S";
+            mainImage.sprite = spriteRankS;
             rankS = false;
         }
         
         else if (rankA)
         {
             rankPanel.SetActive(true);
-            rankText.text = "A";
+            mainImage.sprite = spriteRankA;
             rankA = false;
         }
 
         else if (rankB)
         {
             rankPanel.SetActive(true);
-            rankText.text = "B";
+            mainImage.sprite = spriteRankB;
             rankB = false;
         }
     }
