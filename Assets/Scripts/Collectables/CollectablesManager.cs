@@ -11,6 +11,7 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     public int fase2;
     public int fase3;
     public int fase4;
+    public int rank;
     
     public  int coinsCollected;
     public  int coinsMenu;
@@ -35,6 +36,7 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
         coinsMenu = data.coinsCollected;
         fase1 = data.fase1;
         fase2 = data.fase2;
+        rank = data.rank;
     }
 
     public void SaveData(ref GameData data)
@@ -42,5 +44,6 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
         data.coinsCollected = coinsMenu;
         data.fase1 = fase1;
         data.fase2 = fase2;
+        data.rank = rank;
     }
 }

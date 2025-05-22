@@ -40,6 +40,7 @@ public class ScoreManager : MonoBehaviour
     public bool rankS;
     public bool rankA;
     public bool rankB;
+    public bool rankF;
 
     [Header("Rank Variaveis")]
     public float rank_A;
@@ -53,6 +54,7 @@ public class ScoreManager : MonoBehaviour
     public int fase2;
     public int fase3;
     public int fase4;
+    public int rank;
     
     [Header("Sprites Ranks")]
     public Image mainImage;
@@ -70,12 +72,14 @@ public class ScoreManager : MonoBehaviour
         isDead = false;
         levelCompleted = false;
         currentLevel = SceneManager.GetActiveScene().name;
+        rankF = false;
     }
 
     private void Update()
     {
         Timer();
         TimeToFinish();
+        HandleRanks();
 
         if (isDead | levelCompleted) { return; }
 
@@ -87,6 +91,7 @@ public class ScoreManager : MonoBehaviour
             selectedButton.Select();
             rankPanel.SetActive(true);
             mainImage.sprite = spriteRankF;
+            rankF = true;
         }
     }
 
@@ -177,6 +182,26 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public void HandleRanks()
+    {
+        if (rankS)
+        {
+            rank = 3;
+        }
+        
+        else if (rankA)
+        {
+            if (CollectablesManager.instance.rank == 3 || CollectablesManager.instance.rank == 2){ return; }
+            rank = 2;
+        }
+        
+        else if (rankB)
+        {
+            if (CollectablesManager.instance.rank == 3 || CollectablesManager.instance.rank == 2){ return; }
+            rank = 1;
+        }
+    }
+
     public void FinishLevel()
     {
         if (levelCompleted)
@@ -198,16 +223,17 @@ public class ScoreManager : MonoBehaviour
             if (!CollectablesUI.instance.coins[i].gameObject.activeSelf)
             {
                 DataPersistenceManager.instance.AddCoin(CollectablesUI.instance.coins[i].id, CollectablesUI.instance.coins[i].collected = true);
-                SaveCoins();
+                SaveCollectables();
             }
         }
     }
 
-    public void SaveCoins()
+    public void SaveCollectables()
     {
         if (SceneManager.GetActiveScene().name == "Fase Floresta")
         {
             fase1++;
+            CollectablesManager.instance.rank = rank;
             CollectablesManager.instance.fase1 = fase1;
             DataPersistenceManager.instance.SaveCollectedCoins("Fase Floresta", CollectablesManager.instance.fase1);
         }
@@ -215,6 +241,7 @@ public class ScoreManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Fase Mansão teste")
         {
             fase2++;
+            CollectablesManager.instance.rank = rank;
             CollectablesManager.instance.fase2 = fase2;
             DataPersistenceManager.instance.SaveCollectedCoins("Fase Mansão teste", CollectablesManager.instance.fase2);
         }
