@@ -13,7 +13,6 @@ public class MenuManager : MonoBehaviour
     [Header("Painel Menu")]
     public GameObject menuPanel;
     public GameObject optionsMenu;
-    public Button selectedButton;
 
     private bool openMenu;
 
@@ -24,9 +23,9 @@ public class MenuManager : MonoBehaviour
         if (!openMenu)
         {
             isPaused = true;
-            selectedButton.Select();
             Time.timeScale = 0f;
             menuPanel.SetActive(true);
+            GameManager.instance.mouse.SetActive(true);
         }
         else
         {
@@ -34,6 +33,7 @@ public class MenuManager : MonoBehaviour
             menuPanel.SetActive(false);
             optionsMenu.SetActive(false);
             Time.timeScale = 1f;
+            GameManager.instance.mouse.SetActive(false);
         }
         openMenu = !openMenu;
     }

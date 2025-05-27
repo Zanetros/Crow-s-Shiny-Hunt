@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,9 +25,6 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] Animator animator;
     public string death = "Death";
 
-    [Header("Rank da Fase")]
-
-    public Button selectedButton;
 
     [SerializeField] private AudioSource AudioSource;
     [SerializeField] private AudioClip audioClip;
@@ -75,6 +73,12 @@ public class ScoreManager : MonoBehaviour
         rankF = false;
     }
 
+    private void Start()
+    {
+        GameManager.instance.mouse = GameObject.Find("VirtualMouseUI");
+        GameManager.instance.mouse.SetActive(false); 
+    }
+
     private void Update()
     {
         Timer();
@@ -88,8 +92,8 @@ public class ScoreManager : MonoBehaviour
             StartCoroutine(WaitForDeath());
             isDead = true;
             AudioSource.PlayOneShot(audioClip);
-            selectedButton.Select();
             rankPanel.SetActive(true);
+            GameManager.instance.mouse.SetActive(true);
             mainImage.sprite = spriteRankF;
             rankF = true;
         }
@@ -211,6 +215,7 @@ public class ScoreManager : MonoBehaviour
             DataPersistenceManager.instance.LoadGame();
         }
         
+        GameManager.instance.mouse.SetActive(true);
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);

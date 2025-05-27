@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour
         {
             audioSource.PlayOneShot(clip);
             scoreManager.levelCompleted = true;
-            scoreManager.selectedButton.Select();
             PlayerMovement.moveSpeed -= 0f;
             scoreManager.timeStoped = true;
             PlayerMovement.levelCompleted = true;
