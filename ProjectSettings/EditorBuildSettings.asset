@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase Floresta.unity
     guid: 1204f39e8935f63478ee68bb4baae3e6
   - enabled: 1
-    path: "Assets/Scenes/Fase Mans\xE3o teste.unity"
-    guid: f97f2d4305f68e64cabddf91e7f5d277
+    path: "Assets/Scenes/Fase Mans\xE3o.unity"
+    guid: 84e4321c4c88fd54f9e152517b6e0005
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 608364fc00a6b454083cbe234c6c25ba, type: 2}
