@@ -16,6 +16,7 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     
     public  int coinsCollected;
     public  int coinsMenu;
+    public int coinsTotal;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         coinsMenu = data.coinsCollected;
+        coinsTotal = data.coinsTotal;
         fase1 = data.fase1;
         fase2 = data.fase2;
         rank = data.rank;
@@ -44,6 +46,7 @@ public class CollectablesManager : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData data)
     {
         data.coinsCollected = coinsMenu;
+        data.coinsTotal = coinsTotal;
         data.fase1 = fase1;
         data.fase2 = fase2;
         data.rank = rank;

@@ -77,7 +77,9 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         GameManager.instance.mouse = GameObject.Find("VirtualMouseUI");
-        GameManager.instance.mouse.SetActive(false); 
+        GameManager.instance.mouse.SetActive(false);
+
+        CollectablesManager.instance.coinsTotal = CollectablesManager.instance.coinsMenu;
     }
 
     private void Update()
@@ -239,7 +241,9 @@ public class ScoreManager : MonoBehaviour
             DataPersistenceManager.instance.LoadGame();
         }
         
+        
         GameManager.instance.mouse.SetActive(true);
+        
         rankPanel.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
@@ -264,7 +268,7 @@ public class ScoreManager : MonoBehaviour
             fase1++;
             CollectablesManager.instance.rank = rank;
             CollectablesManager.instance.fase1 = fase1;
-            CollectablesManager.instance.coinsMenu += CollectablesManager.instance.coinsCollected;
+            CollectablesManager.instance.coinsMenu = CollectablesManager.instance.coinsTotal + CollectablesManager.instance.coinsCollected;
             DataPersistenceManager.instance.SaveCollectedCoins("Fase Floresta", CollectablesManager.instance.fase1);
         }
         
@@ -273,7 +277,7 @@ public class ScoreManager : MonoBehaviour
             fase2++;
             CollectablesManager.instance.rank2 = rank2;
             CollectablesManager.instance.fase2 = fase2;
-            CollectablesManager.instance.coinsMenu += CollectablesManager.instance.coinsCollected;
+            CollectablesManager.instance.coinsMenu = CollectablesManager.instance.coinsTotal + CollectablesManager.instance.coinsCollected;
             DataPersistenceManager.instance.SaveCollectedCoins("Fase Mansão", CollectablesManager.instance.fase2);
         }
     }
