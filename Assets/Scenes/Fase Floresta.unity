@@ -4287,6 +4287,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1933462868}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo (1)
@@ -5258,6 +5262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590700835}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -5875,6 +5883,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 893937108}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -7197,6 +7209,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 788827215}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -9372,6 +9388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 737253480}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -11024,6 +11044,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 337052402}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -11774,6 +11798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 224430762}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -12173,6 +12201,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027145468}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -12195,7 +12227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550659711058085021, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0460246
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4550659711058085021, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17286,6 +17318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 357378121}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -17754,6 +17790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 60423587}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -18110,6 +18150,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1933462868}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -24444,6 +24488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1460082355}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -25119,6 +25167,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1326603976}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -28779,6 +28831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 962703515}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
@@ -30099,6 +30155,7 @@ MonoBehaviour:
   fase3: 0
   fase4: 0
   rank: 0
+  rank2: 0
   mainImage: {fileID: 1525202019}
   spriteRankS: {fileID: 21300000, guid: dc370aa2ce8dfa94196d1af01b95dd7d, type: 3}
   spriteRankA: {fileID: 21300000, guid: c2493859565ca204b9b080f8a7e12448, type: 3}
@@ -32055,6 +32112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077366045}
     m_Modifications:
+    - target: {fileID: 2430520233895635385, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777640791761804839, guid: 29a7902efab35974ab57d98c449775b2, type: 3}
       propertyPath: m_Name
       value: tronco_novo
