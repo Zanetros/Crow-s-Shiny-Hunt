@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 325039133}
   - component: {fileID: 325039132}
   m_Layer: 5
-  m_Name: Rank
+  m_Name: Rank 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2332,6 +2332,7 @@ MonoBehaviour:
     fase1: 0
     fase2: 0
     rank: 0
+    rank2: 0
     collectedCoins:
       keys: []
       values: 
@@ -3688,8 +3689,10 @@ MonoBehaviour:
   fase3: 0
   fase4: 0
   rank: 0
+  rank2: 0
   coinsCollected: 0
   coinsMenu: 0
+  coinsTotal: 0
 --- !u!4 &1475419070
 Transform:
   m_ObjectHideFlags: 0

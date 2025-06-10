@@ -220,13 +220,13 @@ public class ScoreManager : MonoBehaviour
         
             else if (rankA)
             {
-                if (CollectablesManager.instance.rank == 3 || CollectablesManager.instance.rank == 2){ return; }
+                if (CollectablesManager.instance.rank2 == 3 || CollectablesManager.instance.rank2 == 2){ return; }
                 rank2 = 2;
             }
         
             else if (rankB)
             {
-                if (CollectablesManager.instance.rank == 3 || CollectablesManager.instance.rank == 2){ return; }
+                if (CollectablesManager.instance.rank2 == 3 || CollectablesManager.instance.rank2 == 2){ return; }
                 rank2 = 1;
             }
         }

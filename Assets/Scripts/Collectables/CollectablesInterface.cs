@@ -72,17 +72,17 @@ public class CollectablesInterface : MonoBehaviour
 
     public void Level2Rank()
     {
-        if (CollectablesManager.instance.rank == 3)
+        if (CollectablesManager.instance.rank2 == 3)
         {
             mainImage2.sprite = rankS;
         }
         
-        else if (CollectablesManager.instance.rank == 2)
+        else if (CollectablesManager.instance.rank2 == 2)
         {
             mainImage2.sprite = rankA;
         }
         
-        else if (CollectablesManager.instance.rank == 1)
+        else if (CollectablesManager.instance.rank2 == 1)
         {
             mainImage2.sprite = rankB;
         }
