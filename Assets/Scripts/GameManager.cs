@@ -11,9 +11,13 @@ public class GameManager : MonoBehaviour
    public static GameManager instance;
    public GameObject mouse;
    
+   public MenuManager menu;
+   
    private void Awake()
    {
       mouse = GameObject.Find("VirtualMouseUI");
+
+      menu = GetComponent<MenuManager>();
       
       Gamepad gamepad = Gamepad.current;
 
@@ -52,9 +56,12 @@ public class GameManager : MonoBehaviour
       }
       else if (change == InputDeviceChange.Added)
       {
-         Debug.Log($"Device added: {device}");
-         // Handle controller reconnection
-         mouse.SetActive(true);
+         if (!menu.isPaused)
+         {
+            Debug.Log($"Device added: {device}");
+            // Handle controller reconnection
+            mouse.SetActive(true);
+         }
       }
    }
 }

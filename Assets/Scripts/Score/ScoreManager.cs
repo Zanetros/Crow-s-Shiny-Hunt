@@ -87,16 +87,31 @@ public class ScoreManager : MonoBehaviour
         Timer();
         TimeToFinish();
         HandleRanks();
+        HandlePlayerDeath();
+    }
 
+    private void HandlePlayerDeath()
+    {
         if (isDead | levelCompleted) { return; }
 
         if (healthBar.hearts == 0)
         {
+            Gamepad gamepad = Gamepad.current;
+
+            if (gamepad == null)
+            {
+                GameManager.instance.mouse.SetActive(false);
+            }
+
+            else
+            {
+                GameManager.instance.mouse.SetActive(true);
+            }
+
             StartCoroutine(WaitForDeath());
             isDead = true;
             AudioSource.PlayOneShot(audioClip);
             rankPanel.SetActive(true);
-            GameManager.instance.mouse.SetActive(true);
             mainImage.sprite = spriteRankF;
             rankF = true;
         }
@@ -122,11 +137,11 @@ public class ScoreManager : MonoBehaviour
         TimeSpan time = TimeSpan.FromSeconds(_time);
         if (_time < 10)
         {
-            timerText.text = time.Minutes.ToString() + ":0" + time.Seconds.ToString();
+            timerText.text = time.Minutes + ":0" + time.Seconds;
         }
         else
         {
-            timerText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+            timerText.text = time.Minutes + ":" + time.Seconds;
         }
     }
 
@@ -234,15 +249,14 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishLevel()
     {
+        Gamepad gamepad = Gamepad.current;
+        
         if (levelCompleted)
         {
             FinalizeCoins();
             DataPersistenceManager.instance.SaveGame();
             DataPersistenceManager.instance.LoadGame();
         }
-        
-        
-        GameManager.instance.mouse.SetActive(true);
         
         rankPanel.SetActive(false);
         Time.timeScale = 1;

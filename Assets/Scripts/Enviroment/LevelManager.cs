@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms;
 
 public class LevelManager : MonoBehaviour
@@ -19,6 +20,18 @@ public class LevelManager : MonoBehaviour
             scoreManager.timeStoped = true;
             PlayerMovement.levelCompleted = true;
             MoveCamera.isDeadCamera = true;
+            
+            Gamepad gamepad = Gamepad.current;
+            
+            if (gamepad == null)
+            {
+                GameManager.instance.mouse.SetActive(false);
+            }
+
+            else
+            {
+                GameManager.instance.mouse.SetActive(true);
+            }
             scoreManager.ScoreText();
         }
     }

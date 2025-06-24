@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,7 +17,7 @@ public class MenuManager : MonoBehaviour
     public GameObject optionsMenu;
 
     private bool openMenu;
-
+    
     public void OpenMenu()
     {      
         if (scoreManager.isDead | scoreManager.levelCompleted) {  return; }
@@ -25,7 +27,18 @@ public class MenuManager : MonoBehaviour
             isPaused = true;
             Time.timeScale = 0f;
             menuPanel.SetActive(true);
-            GameManager.instance.mouse.SetActive(true);
+            
+            Gamepad gamepad = Gamepad.current;
+
+            if (gamepad == null)
+            {
+                GameManager.instance.mouse.SetActive(false);
+            }
+
+            else
+            {
+                GameManager.instance.mouse.SetActive(true);
+            }
         }
         else
         {
