@@ -32177,10 +32177,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1554125863}
     m_Modifications:
-    - target: {fileID: 2582970724593462173, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 412726271b9757947aeec4c9aac375bd, type: 2}
     - target: {fileID: 3716493256112967922, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.64
@@ -32224,10 +32220,6 @@ PrefabInstance:
     - target: {fileID: 4096149482143468104, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
       propertyPath: m_Name
       value: Prefab_moeda 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4479806551126288664, guid: 491fafa1491a8a54aa9f1761dcd6d140, type: 3}
-      propertyPath: id
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
